@@ -1,3 +1,3 @@
-Bienvenidos a Ctrl-R.
+Awesome Profile Cards
 
-Esta es la web grupal del equipo 4, del turno de tarde de Adalab, promocion Grace. 
+Una aplicación para crear tus tarjetas de contacto
