@@ -1,0 +1,266 @@
+.name_adalaber {
+    color: $colorblack;
+    font-family: $fontsecond;
+    font-size: 20px;
+    padding: 0 15px 0 15px;
+}
+
+.general_container {
+    max-width: 320px;
+    width: 100vw;
+    background: pink;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor-madre {
+    display: flex;
+    flex-direction: column;
+    background-color: none;
+    justify-content: center;
+    /*margin:(0 15px);*/
+    text-align: center;
+    border-bottom: grey 0.5px solid;
+}
+
+.text_team {
+    font-size: 16px;
+    font-family: $fontsecond;
+    color: $colorsecond;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+}
+
+.media {
+    margin: 0px 10px;
+}
+
+.page_footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 45px;
+    border-top: 0.5px solid;
+    border-top-color: grey;
+}
+
+.profile_container {
+    margin-bottom: 45px;
+}
+
+.profile_picture {
+    background-size: cover;
+    display: inline-block;
+    width: 180px;
+    height: 180px;
+    border-radius: 20px;
+    border: 5px solid #e3e3ec;
+    margin-bottom: 15px;
+    transition: 1s;
+}
+
+.profile_picture:hover {
+    border-radius: 200px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transform: scale(1.03);
+}
+
+.laurap {
+    background-image: url("../images/laurapareja.jpg");
+}
+
+.laurar {
+    background-image: url("../images/laura.jpg");
+}
+
+.raquel {
+    background-image: url("../images/raquel.jpg");
+}
+
+.sandra {
+    background-image: url("../images/Sandra.jpg");
+}
+
+.tamara {
+    background-image: url("../images/tamara.jpg");
+}
+
+@media all and (min-width: 768px) {
+    .container {
+        margin: 0;
+    }
+    .hero {
+        height: 421px;
+    }
+    .header__container {
+        background-color: #099d8d;
+        padding: 0 45px;
+        opacity: 0.95;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .header__container .container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+    .title_head {
+        display: inline-block;
+        background: none;
+        text-align: center;
+    }
+    .menu_nav {
+        height: fit-content;
+        display: inline-block;
+        background: none;
+    }
+    .list {
+        justify-content: space-between;
+    }
+    .link_m {
+        display: inline;
+        vertical-align: baseline;
+        padding: 0 10px;
+    }
+    .aside_style .container {
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 30px 15px 45px 15px;
+        @media all and (min-width: 768px) {
+            padding: 30px 45px 60px 45px;
+        }
+        @media all and (min-width:1200px) {
+            padding: 45px 138px 60px 138px;
+        }
+    }
+    .strength_container {
+        margin-right: 15px;
+        display: inline-block;
+        width: 50%;
+    }
+    .weakness_container {
+        margin-left: 15px;
+        display: inline-block;
+        width: 50%;
+    }
+    .first_text__team,
+    .strength_container .text_team,
+    .weakness_container .text_team {
+        padding-top: 15px;
+    }
+    .claim__container {
+        transform: translate(0%, 356%);
+    }
+    .claim__container {
+        display: inline-block;
+        width: 441px;
+        transform: translate(0);
+        justify-content: center;
+        padding: 15px 30px;
+        background-color: #ffffff;
+        opacity: 0.8;
+        margin-left: 45px;
+    }
+    .claim {
+        padding: 0;
+        margin: 0;
+        font-size: 18px;
+        line-height: 25px;
+        font-family: "Open Sans-semibold", sans-serif;
+        text-align: justify;
+    }
+    .profile_container {
+        display: flex;
+        align-items: flex-start;
+        margin: 0;
+        justify-content: center;
+        margin-bottom: 60px;
+    }
+    .profile_container_right {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .profile_info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        max-width: 439px;
+        margin-left: 30px;
+    }
+    .profile_info_right {
+        text-align: right;
+        align-items: flex-end;
+        margin-right: 30px;
+    }
+    .profile_picture {
+        height: 205px;
+        width: 205px;
+        margin-bottom: 0;
+    }
+    .info {
+        margin: 0;
+    }
+    .media.twitter {
+        margin-left: 0;
+    }
+    .link_who {
+        position: relative;
+        top: -40px;
+    }
+}
+
+@media all and (min-width: 1200px) {
+    .hero {
+        height: 550px;
+    }
+    .header__container .container {
+        display: flex;
+    }
+    .header__container {
+        padding: 0;
+    }
+    .header__container .container {
+        width: 924px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+    .claim__container {
+        margin-left: 150px;
+        /* este es un poco apaño, habría que hacerlo que estuviese alineado con el .container */
+    }
+    .claim {
+        font-size: 24px;
+        font-family: "OpenSans-SemiBold", sans-serif;
+        line-height: 30px;
+    }
+    .profile_info {
+        margin-left: 45px;
+    }
+    .profile_info_right {
+        margin-right: 45px;
+    }
+    .profile_picture {
+        height: 278px;
+        width: 278px;
+    }
+    .name_group {
+        position: relative;
+        right: 350px;
+    }
+    .logo {
+        position: relative;
+        right: 350px;
+        bottom: 80px;
+    }
+}

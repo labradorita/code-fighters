@@ -1,0 +1,106 @@
+.team_container {
+    text-align: center;
+}
+
+.team_container .container {
+    @media all and(min-width: 768px) {
+        padding: 45px 45px 30px 45px;
+    }
+    @media all and(min-width:1200px) {
+        padding: 45px 300px 45px 300px;
+    }
+}
+
+.title_team {
+    color: $colorlight;
+    font-size: 24px;
+    line-height: 45px;
+    font-family: $fontprincipal;
+    padding-top: 30px;
+}
+
+.title_ctrl {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.title-us .title_team {
+    padding: 30px 0 15px 0;
+    @media all and (min-width: 768px) {
+        padding: 45px 0 15px 0;
+    }
+}
+
+.text_team {
+    color: $colorsecond;
+    font-family: $fontsecond;
+    font-size: $sizetext;
+    line-height: 24px;
+    margin: 0;
+    @media all and (min-width: 768px) {
+        padding-top: 15px;
+    }
+}
+
+.link_team {
+    position: relative;
+    top: -100px;
+    @media all and (min-width: 1200px) {
+        position: relative;
+        top: -80px;
+    }
+}
+
+.square {
+    background-color: $colorwhite;
+    width: 30px;
+    height: 30px;
+    margin-left: calc(50% - 22.5px);
+    position: relative;
+    top: 15px;
+    transform: rotate(45deg);
+}
+
+.aside_style {
+    background-color: rgba(184, 184, 185, 0.5);
+    /*
+    para meter un fondo con opacidad solo vale con rgba y no altera el texto encima*/
+    .container {
+        @media all and (min-width: 768px) {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+    }
+}
+
+.strength_container,
+.weakness_container {
+    text-align: center;
+}
+
+.strength_container {
+    @media all and (min-width: 768px) {
+        display: inline-block;
+        width: 50%;
+    }
+}
+
+.weakness_container {
+    padding-bottom: 30px;
+    @media all and (min-width: 768px) {
+        display: inline-block;
+        width: 50%;
+        padding-bottom: 0;
+    }
+    @media all and (min-width:1200px) {
+        padding-bottom: 0;
+    }
+}
+
+.title_sw {
+    color: $colortext;
+    font-family: $fontprincipal;
+    font-weight: medium;
+    font-size: 22px;
+    line-height: 45px;
+    padding-top: 15px;
+}
