@@ -1,5 +1,41 @@
 .landing_main {
-    background: red;
+    background-color: $color-indexBackground;
     width: 100vw;
-    height: 200px;
+    height: 80vh;
+}
+
+.landing_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 26px 0 26px;
+}
+
+.logo_awesome {
+    width: 250px;
+    height: 63px;
+    margin-top: 95px;
+}
+
+.landing_title {
+    margin-top: 35.4px;
+    color: $color-secondary;
+    font-family: $font-primary;
+    font-size: 19.2px;
+}
+
+.landing_subtitle {
+    color: $color-tertiary;
+    font-family: $font-tertiary;
+    font-size: 12.8px;
+}
+
+.landing_icons_container {
+    width: 268px;
+    height: 73.8px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: white;
 }
