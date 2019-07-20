@@ -1,3 +1,2 @@
-Bienvenidos a Ctrl-R.
-
-Esta es la web grupal del equipo 4, del turno de tarde de Adalab, promocion Grace. 
+Bienvenidos a Display
+Esta es la web grupal del equipo 3, del turno de tarde de Adalab, promocion Grace. 
