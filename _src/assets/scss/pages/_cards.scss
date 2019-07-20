@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: $fontsecond;
+    font-family: $font-secondary;
 }
 
 .hero.hero_contact {
@@ -37,22 +37,22 @@
 }
 
 .button {
-    background-color: $colortext;
+    background-color: $color-textLight;
     height: 45px;
-    font-family: $fontsecond;
+    font-family: $font-secondary;
     font-weight: 600;
     font-size: 16px;
-    color: $colorwhite;
+    color: $color-white;
     margin-top: 15px;
 }
 
 .text_field {
-    color: $colorsecond;
+    color: $color-secondary;
     font-size: 12px;
 }
 
 .star {
-    color: $colorlight;
+    color: $color-lineLight;
 }
 
 .label {
@@ -69,7 +69,7 @@
 .item {
     height: 45px;
     margin-bottom: 15px;
-    border: solid $colorsecond 0.5px;
+    border: solid $color-secondary 0.5px;
     font-size: 16px;
     padding-left: 10px;
 }
