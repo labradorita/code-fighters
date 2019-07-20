@@ -7,12 +7,23 @@
 
 .sectiona__main {
   background-image: linear-gradient(to bottom, $color-cardBackDark, $color-cardBackLight);
+  width: 320px;
+  height: 457px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__button--container {
+  padding: 20px 20px 20px 0;
+  width: 240px;
+  margin: 0 auto;
 }
 
 .sectiona__preview {
-  width: 240px;
-  height: 329px;
-  padding: 88px 35px 40px 45px;
+  padding-bottom: 40px;
+  justify-content: center;
 }
 
 .sectiona__button {
@@ -27,14 +38,87 @@
   color: $color-textMenu;
   font-family: $font-tertiary;
   font-weight: 400;
+  font-size: 12px;
+  text-transform: uppercase;
+  display: inline;
+}
+
+.reset {
+  font-family: $font-tertiary;
+  font-weight: normal;
+}
+
+.card {
+  width: 240px;
+  height: 329px;
+
+}
+
+.preview__bio {
+  background-color: $color-white;
+  //border-left: solid 5px $color-primary;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.preview__bio--rectangle {
+  height: 42px;
+  width: 5px;
+  margin: 0;
+  background: $color-primary;
 }
 
 .preview__bio--name {
-  color: $color-tertiary;
   font-family: $font-secondary;
   font-size: 18px;
-  background-color: $color-white;
-  border-left: solid 2px $color-primary;
+  color: $color-tertiary;
+  font-weight: bold;
+  padding: 0 0 0 20px;
+  display: inline;
 }
+
+.preview__bio--job {
+  color: $color-textMenu;
+  font-family: $font-secondary;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 0 0 0 20px;
+}
+
+.card__image {
+  width: 240px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-image: url(https://i.ytimg.com/vi/NV2taZ8-0EI/maxresdefault.jpg);
+}
+
+.card__social {
+  height: 54px;
+  background: $color-white;
+  display: flex;
+}
+
+.card__social--div {
+  padding-left: 10px;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card__social--button {
+  width: $buttonWidth;
+  height: $buttonHeight;
+  border-radius: $button--border-radius;
+  border: $buttonBorder;
+  margin-left: 10px;
+  justify-self: center;
+  padding: 6px;
+  color: $color-tertiary;
+}
+
 
 @media all and (min-width: 768px) {}
