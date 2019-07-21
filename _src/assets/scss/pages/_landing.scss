@@ -1,41 +1,85 @@
 .landing_main {
+    width: 100%;
+    height: 100%;
     background-color: $color-indexBackground;
-    width: 100vw;
-    height: 80vh;
 }
 
 .landing_content {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 0 26px 0 26px;
+    padding: 0 26px 0 26px;
 }
 
 .logo_awesome {
     width: 250px;
     height: 63px;
     margin-top: 95px;
+    @media all and (min-width: 768px) {
+        width: 419px;
+        height: 105px;
+        margin-top: 350px;
+    }
 }
 
 .landing_title {
     margin-top: 35.4px;
     color: $color-secondary;
-    font-family: $font-primary;
     font-size: 19.2px;
+    font-family: $font-primary;
+    @media all and (min-width: 768px) {
+        margin-top: 31px;
+        font-size: 24px;
+    }
 }
 
 .landing_subtitle {
     color: $color-tertiary;
     font-family: $font-tertiary;
     font-size: 12.8px;
+    @media all and (min-width: 768px) {
+        font-size: 16px;
+    }
 }
 
 .landing_icons_container {
+    box-sizing: content-box;
     width: 268px;
     height: 73.8px;
+    margin-top: 17.8px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    background-color: white;
+    border: $color-secondary solid 1.6px;
+    @media all and (min-width: 768px) {
+        margin-top: 27px;
+        width: 325px;
+        height: 86px;
+    }
+}
+
+.icon_box {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0 10px 0;
+    @media all and (min-width: 768px) {
+        padding: 15px 0 22px 0;
+    }
+}
+
+.icon_text {
+    font-size: 12.8px;
+    font-family: $font-tertiary;
+    color: $color-textMenu;
+    @media all and (min-width: 768px) {
+        font-size: 16px;
+    }
+}
+
+.far {
+    font-weight: 400;
+    font-size: 32px;
+    color: $color-secondary;
 }
