@@ -7,18 +7,22 @@
 
 .sectiona__main {
   background-image: linear-gradient(to bottom, $color-cardBackDark, $color-cardBackLight);
-  width: 320px;
   height: 457px;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
+
+  &--container {
+    width: 240px;
+    margin-top: 18px;
+    padding-bottom: 40px;
+  }
 }
 
 .main__button--container {
   padding: 20px 20px 20px 0;
   width: 240px;
-  margin: 0 auto;
+
 }
 
 .sectiona__preview {
@@ -32,15 +36,15 @@
   border-radius: 15px;
   border: solid 1px $color-white;
   background-color: transparent;
-}
 
-.sectiona__button--text {
-  color: $color-textMenu;
-  font-family: $font-tertiary;
-  font-weight: 400;
-  font-size: 12px;
-  text-transform: uppercase;
-  display: inline;
+  &--text {
+    color: $color-textMenu;
+    font-family: $font-tertiary;
+    font-weight: 400;
+    font-size: 12px;
+    text-transform: uppercase;
+    display: inline;
+  }
 }
 
 .reset {
@@ -57,34 +61,33 @@
 .preview__bio {
   background-color: $color-white;
   //border-left: solid 5px $color-primary;
-  padding-top: 25px;
+  padding-top: 21px;
   padding-bottom: 10px;
   display: flex;
   flex-direction: row;
-}
 
-.preview__bio--rectangle {
-  height: 42px;
-  width: 5px;
-  margin: 0;
-  background: $color-primary;
-}
+  &--rectangle {
+    height: 42px;
+    width: 5px;
+    background: $color-primary;
+  }
 
-.preview__bio--name {
-  font-family: $font-secondary;
-  font-size: 18px;
-  color: $color-tertiary;
-  font-weight: bold;
-  padding: 0 0 0 20px;
-  display: inline;
-}
+  &--name {
+    font-family: $font-secondary;
+    font-size: 18px;
+    color: $color-tertiary;
+    font-weight: bold;
+    padding: 0 0 4px 20px;
+    display: inline;
+  }
 
-.preview__bio--job {
-  color: $color-textMenu;
-  font-family: $font-secondary;
-  font-weight: 400;
-  font-size: 16px;
-  padding: 0 0 0 20px;
+  &--job {
+    color: $color-textMenu;
+    font-family: $font-secondary;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 0 0 0 20px;
+  }
 }
 
 .card__image {
@@ -99,26 +102,41 @@
   height: 54px;
   background: $color-white;
   display: flex;
+
+  &--div {
+    padding-left: 10px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  &--button {
+    width: $buttonWidth;
+    height: $buttonHeight;
+    border-radius: $button--border-radius;
+    border: $buttonBorder;
+    margin-left: 10px;
+    padding: 6px;
+    color: $color-tertiary;
+  }
 }
 
-.card__social--div {
-  padding-left: 10px;
-  display: flex;
-  justify-items: center;
-  align-items: center;
-  text-align: center;
+@media all and (min-width: 768px) {
+  .sectiona__main {
+    width: 329px;
+    height: 812px;
+    border-radius: 6px;
+
+    &--container {
+      margin: 153px auto 260px;
+    }
+  }
 }
 
-.card__social--button {
-  width: $buttonWidth;
-  height: $buttonHeight;
-  border-radius: $button--border-radius;
-  border: $buttonBorder;
-  margin-left: 10px;
-  justify-self: center;
-  padding: 6px;
-  color: $color-tertiary;
+@media all and (min-width: 1024px) {
+  .sectiona__main {
+    width: 585px;
+    height: 812px;
+  }
 }
-
-
-@media all and (min-width: 768px) {}
