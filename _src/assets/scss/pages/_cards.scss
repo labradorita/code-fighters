@@ -14,8 +14,8 @@
 
   &--container {
     width: 240px;
-    margin-top: 18px;
-    padding-bottom: 40px;
+/*     margin-top: 18px;
+ */    padding-bottom: 40px;
   }
 }
 
@@ -113,9 +113,9 @@
 
   &--button {
     width: $buttonWidth;
-    height: $buttonHeight;
+/*     height: $buttonHeight;
     border-radius: $button--border-radius;
-    border: $buttonBorder;
+ */    border: $buttonBorder;
     margin-left: 10px;
     padding: 6px;
     color: $color-tertiary;
