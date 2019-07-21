@@ -1,3 +1,3 @@
-Awesome Profile Cards
+Bienvenidos a Display.
 
-Una aplicación para crear tus tarjetas de contacto
+Esta es la web grupal del equipo 3, del turno de tarde de Adalab, promocion Grace. 
