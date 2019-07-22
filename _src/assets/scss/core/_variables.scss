@@ -1,4 +1,4 @@
-/// colors ///
+// colors 
 $colorPrimary: #438792;
 $colorSecondary: #e17334;
 $colorTertiary: #114e4e;
@@ -11,18 +11,19 @@ $colorWhite: #ffffff;
 $colorLineLight: #f9f4dc;
 $colorCardBackDark: #bfcdd0;
 $colorCardBackLight: #dde9ed;
-/// sizes ///
-<<<<<<< HEAD
+
+// sizes 
+
 $sizetext: 18px;
 $sizetext2: 14px;
-/// buttonsCard ///
+
+// buttonsCard 
+
 $buttonWidth: 32px;
 $buttonHeight: 32px;
-$button--border-radius: 16px;
-$buttonBorder: solid 2px $color-quaternary;
-/// images ///
+$buttonBorderRadius: 16px;
+$buttonBorder: solid 2px $colorQuaternary;
+
+// images 
+
 $imagePath: '../images';
-=======
-$sizeText: 18px;
-$sizeText2: 14px;
->>>>>>> f61c66fb668a66bdbbd814219bea95621a689270

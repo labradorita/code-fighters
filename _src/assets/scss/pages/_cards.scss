@@ -1,5 +1,5 @@
 .sectiona__main {
-  background-image: linear-gradient(to bottom, $color-cardBackDark, $color-cardBackLight);
+  background-image: linear-gradient(to bottom, $colorCardBackDark, $colorCardBackLight);
   height: 457px;
   display: flex;
   flex-direction: column;
@@ -24,7 +24,7 @@
 }
 
 .reset {
-  font-family: $font-tertiary;
+  font-family: $fontTertiary;
   font-weight: normal;
 }
 
@@ -35,7 +35,7 @@
 }
 
 .preview__bio {
-  background-color: $color-white;
+  background-color: $colorWhite;
   //border-left: solid 5px $color-primary;
   padding-top: 21px;
   padding-bottom: 10px;
@@ -45,13 +45,13 @@
   &--rectangle {
     height: 42px;
     width: 5px;
-    background: $color-primary;
+    background: $colorPrimary;
   }
 
   &--name {
-    font-family: $font-secondary;
+    font-family: $fontSecondary;
     font-size: 18px;
-    color: $color-tertiary;
+    color: $colorTertiary;
     font-weight: bold;
     padding: 0 0 4px 20px;
     display: inline;
@@ -59,7 +59,7 @@
 
   &--job {
     color: $color-textMenu;
-    font-family: $font-secondary;
+    font-family: $fontSecondary;
     font-weight: 400;
     font-size: 16px;
     padding: 0 0 0 20px;
@@ -76,7 +76,7 @@
 
 .card__social {
   height: 54px;
-  background: $color-white;
+  background: $colorWhite;
   display: flex;
 
   &--div {
@@ -90,11 +90,11 @@
   &--button {
     width: $buttonWidth;
     height: $buttonHeight;
-    border-radius: $button--border-radius;
+    border-radius: $buttonBorderRadius;
     border: $buttonBorder;
     margin-left: 10px;
     padding: 6px;
-    color: $color-tertiary;
+    color: $colorTertiary;
   }
 }
 
@@ -241,3 +241,5 @@
         padding: 0;
       }
     }
+  }
+}
