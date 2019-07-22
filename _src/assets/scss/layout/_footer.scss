@@ -12,14 +12,14 @@
     @media all and (min-width: 768px) {
       flex-direction: row;
       justify-content: space-between;
-      padding: 20px 40px;
+      padding: 10px 40px;
     }
   }
 
   &__copy {
     color: $color-textLight;
     font-family: $font-tertiary;
-    font-size: 14px;
+    font-size: $sizetext2;
     padding-bottom: 12px;
   }
 }
