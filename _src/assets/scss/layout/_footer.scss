@@ -1,22 +1,26 @@
 .footer {
-  border-top-style: red solid 2px;
+  // border-top-style: red solid 2px;
 
   &__container {
     display: flex;
-    background-color: red;
     color: $color-textLight;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 110px;
 
-    @media screen and (min-width: 400px) {
-      flex-direction: column;
+    @media all and (min-width: 768px) {
+      flex-direction: row;
       justify-content: space-between;
-      padding: 110px;
+      padding: 20px 40px;
     }
   }
 
   &__copy {
     color: $color-textLight;
     font-family: $font-tertiary;
+    font-size: 14px;
+    padding-bottom: 12px;
   }
 }
 
