@@ -1,9 +1,7 @@
 .footer {
-  // border-top-style: red solid 2px;
-
   &__container {
     display: flex;
-    color: $color-textLight;
+    color: $colorTextLight;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -18,8 +16,8 @@
 
   &__copy {
     color: $color-textLight;
-    font-family: $font-tertiary;
-    font-size: $sizetext2;
+    font-family: $fontTertiary;
+    font-size: $sizeText2;
     padding-bottom: 12px;
   }
 }
