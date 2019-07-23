@@ -6,7 +6,11 @@
 @import "components/buttons";
 
 .sectiona__main {
-  background-image: linear-gradient(to bottom, $color-cardBackDark, $color-cardBackLight);
+  background-image: linear-gradient(
+    to bottom,
+    $color-cardBackDark,
+    $color-cardBackLight
+  );
   height: 457px;
   display: flex;
   flex-direction: column;
@@ -14,15 +18,14 @@
 
   &--container {
     width: 240px;
-/*     margin-top: 18px;
- */    padding-bottom: 40px;
+    margin-top: 18px;
+    padding-bottom: 40px;
   }
 }
 
 .main__button--container {
   padding: 20px 20px 20px 0;
   width: 240px;
-
 }
 
 .sectiona__preview {
@@ -55,12 +58,11 @@
 .card {
   width: 240px;
   height: 329px;
-
 }
 
 .preview__bio {
   background-color: $color-white;
-  //border-left: solid 5px $color-primary;
+  border-left: solid 5px $color-primary;
   padding-top: 21px;
   padding-bottom: 10px;
   display: flex;
@@ -95,7 +97,7 @@
   height: 200px;
   background-size: cover;
   background-position: center;
-  background-image: url('../images/homer.jpg');
+  background-image: url("../images/homer.jpg");
 }
 
 .card__social {
@@ -113,9 +115,9 @@
 
   &--button {
     width: $buttonWidth;
-/*     height: $buttonHeight;
+    height: $buttonHeight;
     border-radius: $button--border-radius;
- */    border: $buttonBorder;
+    border: $buttonBorder;
     margin-left: 10px;
     padding: 6px;
     color: $color-tertiary;
