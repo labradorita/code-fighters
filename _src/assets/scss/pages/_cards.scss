@@ -1,16 +1,13 @@
-// Core
-@import "core/links";
-@import "core/variables";
-@import "core/typography";
-// Components
-@import "components/buttons";
-
 .sectiona__main {
+<<<<<<< HEAD
   background-image: linear-gradient(
     to bottom,
     $color-cardBackDark,
     $color-cardBackLight
   );
+=======
+  background-image: linear-gradient(to bottom, $colorCardBackDark, $colorCardBackLight);
+>>>>>>> ea2326e43a3d34a1d2c5f2beb342303a621f6f8d
   height: 457px;
   display: flex;
   flex-direction: column;
@@ -33,25 +30,8 @@
   justify-content: center;
 }
 
-.sectiona__button {
-  width: 75px;
-  height: 30px;
-  border-radius: 15px;
-  border: solid 1px $color-white;
-  background-color: transparent;
-
-  &--text {
-    color: $color-textMenu;
-    font-family: $font-tertiary;
-    font-weight: 400;
-    font-size: 12px;
-    text-transform: uppercase;
-    display: inline;
-  }
-}
-
 .reset {
-  font-family: $font-tertiary;
+  font-family: $fontTertiary;
   font-weight: normal;
 }
 
@@ -61,8 +41,13 @@
 }
 
 .preview__bio {
+<<<<<<< HEAD
   background-color: $color-white;
   border-left: solid 5px $color-primary;
+=======
+  background-color: $colorWhite;
+  //border-left: solid 5px $color-primary;
+>>>>>>> ea2326e43a3d34a1d2c5f2beb342303a621f6f8d
   padding-top: 21px;
   padding-bottom: 10px;
   display: flex;
@@ -71,21 +56,21 @@
   &--rectangle {
     height: 42px;
     width: 5px;
-    background: $color-primary;
+    background: $colorPrimary;
   }
 
   &--name {
-    font-family: $font-secondary;
+    font-family: $fontSecondary;
     font-size: 18px;
-    color: $color-tertiary;
+    color: $colorTertiary;
     font-weight: bold;
     padding: 0 0 4px 20px;
     display: inline;
   }
 
   &--job {
-    color: $color-textMenu;
-    font-family: $font-secondary;
+    color: $colorTextMenu;
+    font-family: $fontSecondary;
     font-weight: 400;
     font-size: 16px;
     padding: 0 0 0 20px;
@@ -97,12 +82,16 @@
   height: 200px;
   background-size: cover;
   background-position: center;
+<<<<<<< HEAD
   background-image: url("../images/homer.jpg");
+=======
+  background-image: url($imagePath + '/homer.jpg');
+>>>>>>> ea2326e43a3d34a1d2c5f2beb342303a621f6f8d
 }
 
 .card__social {
   height: 54px;
-  background: $color-white;
+  background: $colorWhite;
   display: flex;
 
   &--div {
@@ -111,16 +100,6 @@
     justify-items: center;
     align-items: center;
     text-align: center;
-  }
-
-  &--button {
-    width: $buttonWidth;
-    height: $buttonHeight;
-    border-radius: $button--border-radius;
-    border: $buttonBorder;
-    margin-left: 10px;
-    padding: 6px;
-    color: $color-tertiary;
   }
 }
 
@@ -140,5 +119,132 @@
   .sectiona__main {
     width: 585px;
     height: 812px;
+  }
+
+  .contact-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $fontSecondary;
+  }
+
+  .hero.hero_contact {
+    height: 300px;
+    background: url(../images/contact_us.jpg) no-repeat;
+    background-size: cover;
+  }
+
+  .hero_contact .claim__container {
+    display: none;
+  }
+
+  .main_contact {
+    width: 100%;
+    border-bottom: grey 0.5px solid;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0 15px;
+    margin-top: 30px;
+    max-width: 442px;
+  }
+
+  .contact_container {
+    margin: 0 15px 15px 15px;
+  }
+
+  .button {
+    background-color: $colorTextLight;
+    height: 45px;
+    font-family: $fontSecondary;
+    font-weight: 600;
+    font-size: 16px;
+    color: $colorWhite;
+    margin-top: 15px;
+  }
+
+  .text_field {
+    color: $colorSecondary;
+    font-size: 12px;
+  }
+
+  .star {
+    color: $colorLineLight;
+  }
+
+  .label {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+  .email_container,
+  .phone_container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item {
+    height: 45px;
+    margin-bottom: 15px;
+    border: solid $colorSecondary 0.5px;
+    font-size: 16px;
+    padding-left: 10px;
+  }
+
+  .item-message {
+    min-height: 105px;
+    padding-top: 10px;
+  }
+
+  @media all and (min-width: 768px) {
+    .button {
+      width: 206px;
+      align-self: flex-end;
+    }
+
+    .contact_container {
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+  @media all and (min-width: 1200px) {
+    .hero.hero_contact {
+      height: 400px;
+    }
+
+    .contact_container {
+      width: 601px;
+      max-width: 601px;
+      margin-top: 45px;
+    }
+
+    .form {
+      margin-bottom: 120px;
+    }
+
+    .email-phone {
+      display: flex;
+    }
+
+    .email_container {
+      width: 395px;
+      margin-right: 44px;
+    }
+
+    .phone_container {
+      width: 40%;
+      width: 162px;
+    }
+
+    .contact_container .title_team {
+      padding: 0;
+    }
   }
 }
