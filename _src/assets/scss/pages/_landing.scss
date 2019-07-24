@@ -1,7 +1,7 @@
 .landing_main {
     width: 100%;
     height: 100%;
-    background-color: $color-indexBackground;
+    background-color: $colorIndexBackground;
 }
 
 .landing_content {
@@ -11,6 +11,12 @@
     align-items: center;
     text-align: center;
     padding: 0 26px 0 26px;
+}
+
+.landing_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .logo_awesome {
@@ -26,9 +32,9 @@
 
 .landing_title {
     margin-top: 35.4px;
-    color: $color-secondary;
+    color: $colorSecondary;
     font-size: 19.2px;
-    font-family: $font-primary;
+    font-family: $fontPrimary;
     @media all and (min-width: 768px) {
         margin-top: 31px;
         font-size: 24px;
@@ -36,8 +42,8 @@
 }
 
 .landing_subtitle {
-    color: $color-tertiary;
-    font-family: $font-tertiary;
+    color: $colorTertiary;
+    font-family: $fontTertiary;
     font-size: 12.8px;
     @media all and (min-width: 768px) {
         font-size: 16px;
@@ -52,7 +58,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    border: $color-secondary solid 1.6px;
+    border: $colorSecondary solid 1.6px;
     @media all and (min-width: 768px) {
         margin-top: 27px;
         width: 325px;
@@ -71,8 +77,8 @@
 
 .icon_text {
     font-size: 12.8px;
-    font-family: $font-tertiary;
-    color: $color-textMenu;
+    font-family: $fontTertiary;
+    color: $colorTextMenu;
     @media all and (min-width: 768px) {
         font-size: 16px;
     }
@@ -81,5 +87,5 @@
 .far {
     font-weight: 400;
     font-size: 32px;
-    color: $color-secondary;
+    color: $colorSecondary;
 }

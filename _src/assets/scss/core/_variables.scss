@@ -1,16 +1,23 @@
-/// colors ///
-$color-primary: #438792;
-$color-secondary: #e17334;
-$color-tertiary: #114e4e;
-$color-quaternary: #a2deaf;
-$color-indexBackground: #f5f5f5;
-$color-textLight: #6b6b6b;
-$color-textMenu: #54585a;
-$color-black: #000000;
-$color-white: #ffffff;
-$color-lineLight: #f9f4dc;
-$color-cardBackDark: #bfcdd0;
-$color-cardBackLight: #dde9ed;
-/// sizes ///
-$sizetext: 18px;
-$sizetext2: 14px;
+// colors
+$colorPrimary: #438792;
+$colorSecondary: #e17334;
+$colorTertiary: #114e4e;
+$colorQuaternary: #a2deaf;
+$colorIndexBackground: #f5f5f5;
+$colorTextLight: #6b6b6b;
+$colorTextMenu: #54585a;
+$colorBlack: #000000;
+$colorWhite: #ffffff;
+$colorLineLight: #f9f4dc;
+$colorCardBackDark: #bfcdd0;
+$colorCardBackLight: #dde9ed;
+// sizes
+$sizeText: 18px;
+$sizeText2: 14px;
+// buttonsCard
+$buttonWidth: 32px;
+$buttonHeight: 32px;
+$buttonBorderRadius: 16px;
+$buttonBorder: solid 2px $colorQuaternary;
+// images
+$imagePath: "../images";

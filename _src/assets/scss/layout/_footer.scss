@@ -1,0 +1,27 @@
+.footer {
+  &__container {
+    display: flex;
+    color: $colorTextLight;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 110px;
+
+    @media all and (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 10px 40px;
+    }
+  }
+
+  &__copy {
+    color: $colorTextLight;
+    font-family: $fontTertiary;
+    font-size: $sizeText2;
+    padding-bottom: 12px;
+  }
+}
+
+.logo__adalab {
+  height: 40px;
+}
