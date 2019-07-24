@@ -1,17 +1,10 @@
-// Core
-@import "core/links";
-@import "core/variables";
-@import "core/typography";
-// Components
-@import "components/buttons";
-
 .fillin_form {
   display: flex;
   flex-direction: column;
   background-color: linear-gradient(
     to bottom,
-    $color-indexBackground,
-    $color-white
+    $colorIndexBackground,
+    $colorWhite
   );
   height: 729px;
   width: 100%;
@@ -31,7 +24,7 @@
   margin-bottom: 28px;
 }
 .fa-keyboard {
-  font-size: $sizetext;
+  font-size: $sizeText;
 }
 .form__arrow__ico {
   display: flex;
@@ -44,14 +37,14 @@
   align-self: flex-end;
 }
 .fa-angle-up {
-  font-size: $sizetext;
-  color: $color-textMenu;
+  font-size: $sizeText;
+  color: $colorTextMenu;
   margin-left: 155px;
 }
 .form__title {
-  font-family: $font-tertiary;
-  font-size: $sizetext;
-  color: $color-textMenu;
+  font-family: $fontTertiary;
+  font-size: $sizeText;
+  color: $colorTextMenu;
   margin-left: 10px;
   margin-bottom: 25px;
 }
@@ -60,10 +53,10 @@
   flex-direction: column;
 }
 .form__item {
-  font-family: $font-tertiary;
-  font-size: $sizetext2;
+  font-family: $fontTertiary;
+  font-size: $sizeText2;
   line-height: 1.43;
-  color: $color-tertiary;
+  color: $fontTertiary;
 }
 .form__photo {
   display: none;
@@ -71,15 +64,15 @@
 .item__rectangle {
   width: 281px;
   height: 30px;
-  border: solid 1px $color-quaternary;
+  border: solid 1px $colorQuaternary;
   margin-top: 7px;
   margin-bottom: 20px;
 }
 .item__rectangle::placeholder {
-  color: $color-placeholder;
+  color: #c5c5c5;
   line-height: 1.43;
-  font-family: $font-tertiary;
-  font-size: $sizetext2;
+  font-family: $fontTertiary;
+  font-size: $sizeText2;
   padding-left: 9px;
 }
 .image__btn {
@@ -87,11 +80,11 @@
   height: 30px;
   border-radius: 3px;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
-  background-color: $color-secondary;
-  color: $color-white;
+  background-color: $colorSecondary;
+  color: $colorWhite;
   line-height: 20px;
-  font-family: $font-tertiary;
-  font-size: $sizetext2;
+  font-family: $fontTertiary;
+  font-size: $sizeText2;
   margin-top: 7px;
   margin-bottom: 20px;
 }
