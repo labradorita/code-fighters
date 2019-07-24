@@ -15,29 +15,47 @@
   }
 }
 
-.sectiona__button {
-  width: 75px;
-  height: 30px;
-  border-radius: 15px;
-  border: solid 1px $colorWhite;
-  background-color: transparent;
+.share__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 200px;
+  background: $colorSecondary;
+  border-radius: 12px;
+  border: 0;
+  font-family: $fontTertiary;
+  color: $colorWhite;
+  font-size: 18px;
 
-  &--text {
-    color: $colorTextMenu;
-    font-family: $fontTertiary;
-    font-weight: 400;
-    font-size: 12px;
-    text-transform: uppercase;
-    display: inline;
+  .far {
+    color: $colorWhite;
+    padding-right: 5px;
   }
-}
+  .sectiona__button {
+    width: 75px;
+    height: 30px;
+    border-radius: 15px;
+    border: solid 1px $colorWhite;
+    background-color: transparent;
 
-.card__social--button {
-  width: $buttonWidth;
-  height: $buttonHeight;
-  border-radius: $buttonBorderRadius;
-  border: $buttonBorder;
-  margin-left: 10px;
-  padding: 6px;
-  color: $colorTertiary;
+    &--text {
+      color: $colorTextMenu;
+      font-family: $fontTertiary;
+      font-weight: 400;
+      font-size: 12px;
+      text-transform: uppercase;
+      display: inline;
+    }
+  }
+
+  .card__social--button {
+    width: $buttonWidth;
+    height: $buttonHeight;
+    border-radius: $buttonBorderRadius;
+    border: $buttonBorder;
+    margin-left: 10px;
+    padding: 6px;
+    color: $colorTertiary;
+  }
 }
