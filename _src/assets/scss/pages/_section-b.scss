@@ -7,6 +7,7 @@
 .fillin_form {
     display: flex;
     flex-direction: column;
+    align-items: center;
     background-color: linear-gradient(to bottom, $colorIndexBackground, $colorWhite);
     height: 729px;
     width: 100%;
@@ -16,6 +17,12 @@
 .form__container__title {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+}
+
+.form__title__items {
+    display: flex;
+    flex-direction: row;
 }
 
 .form__ico {
@@ -46,7 +53,8 @@
 .fa-angle-up {
     font-size: $sizeText;
     color: $colorTextMenu;
-    margin-left: 155px;
+    /*   margin-left: 155px;
+ */
 }
 
 .form__title {
