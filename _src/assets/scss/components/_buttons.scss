@@ -10,7 +10,7 @@
   border-radius: 30px;
   background-color: $colorPrimary;
 
-  @media all and (min-width: 768px) {
+  @media all and (min-width: $tablet) {
     margin: 186px 0 59px 0;
   }
 }

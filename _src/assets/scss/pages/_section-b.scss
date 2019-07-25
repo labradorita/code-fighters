@@ -95,7 +95,7 @@
   margin-top: 7px;
   margin-bottom: 20px;
 }
-@media all and (min-width: 768px) {
+@media all and (min-width: $tablet) {
 }
-@media all and (min-width: 1024px) {
+@media all and (min-width: $desktop) {
 }

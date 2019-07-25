@@ -7,7 +7,7 @@
     flex-direction: column;
     padding: 20px 110px;
 
-    @media all and (min-width: 768px) {
+    @media all and (min-width: $tablet) {
       flex-direction: row;
       justify-content: space-between;
       padding: 10px 40px;

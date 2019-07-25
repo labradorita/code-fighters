@@ -1,5 +1,9 @@
 .sectiona__main {
-  background-image: linear-gradient(to bottom, $colorCardBackDark, $colorCardBackLight);
+  background-image: linear-gradient(
+    to bottom,
+    $colorCardBackDark,
+    $colorCardBackLight
+  );
   height: 457px;
   display: flex;
   flex-direction: column;
@@ -69,7 +73,7 @@
   height: 200px;
   background-size: cover;
   background-position: center;
-  background-image: url($imagePath + '/homer.jpg');
+  background-image: url($imagePath+"/homer.jpg");
 }
 
 .card__social {
@@ -86,7 +90,7 @@
   }
 }
 
-@media all and (min-width: 768px) {
+@media all and (min-width: $tablet) {
   .sectiona__main {
     width: 329px;
     height: 812px;
@@ -183,6 +187,5 @@
   .item-message {
     min-height: 105px;
     padding-top: 10px;
-
   }
 }
