@@ -1,50 +1,52 @@
 .share_form {
-  display: flex;
-  flex-direction: column;
-  background-color: linear-gradient(
-    to bottom,
-    $colorIndexBackground,
-    $colorWhite
-  );
-  height: 729px;
-  width: 100%;
-  padding: 10px 20px 30px 23px;
+    display: flex;
+    flex-direction: column;
+    background-color: linear-gradient(to bottom, $colorIndexBackground, $colorWhite);
+    height: 729px;
+    width: 100%;
+    padding: 10px 20px 30px 23px;
 }
+
 .share__container__title {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
+
 .share__arrow__ico {
-  display: flex;
-  justify-items: center;
-  align-items: center;
-  text-align: center;
-  width: 21px;
-  height: 18px;
-  margin-bottom: 28px;
-  align-self: flex-end;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    width: 21px;
+    height: 18px;
+    margin-bottom: 28px;
+    align-self: flex-end;
 }
+
 .share__title {
-  font-family: $fontTertiary;
-  font-size: $sizeText;
-  color: $colorTextMenu;
-  margin-left: 10px;
-  margin-bottom: 25px;
-  text-transform: uppercase;
+    font-family: $fontTertiary;
+    font-size: $sizeText;
+    color: $colorTextMenu;
+    margin-left: 10px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
 }
+
 .share__ico {
-  display: flex;
-  justify-items: center;
-  align-items: center;
-  text-align: center;
-  width: 21px;
-  height: 18px;
-  margin-bottom: 28px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    width: 21px;
+    height: 18px;
+    margin-bottom: 28px;
 }
-.fa-share-alt {
-  font-size: $sizeText;
-  color: $colorSecondary;
+
+.fa-share-alt-cards {
+    font-size: $sizeText;
+    color: $colorSecondary;
 }
+
 .share__button {
-  align-items: center;
+    align-items: center;
 }
