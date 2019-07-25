@@ -73,11 +73,7 @@
   height: 200px;
   background-size: cover;
   background-position: center;
-<<<<<<< HEAD
   background-image: url($imagePath+"/homer.jpg");
-=======
-  background-image: url($imagePath + '/homer.jpg');
->>>>>>> master
 }
 
 .card__social {
@@ -191,6 +187,5 @@
   .item-message {
     min-height: 105px;
     padding-top: 10px;
-
   }
 }

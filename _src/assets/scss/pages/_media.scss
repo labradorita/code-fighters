@@ -1,0 +1,22 @@
+@media all and (min-width: 768px) {
+  .section__background {
+    height: 856px;
+    background-image: linear-gradient(to bottom, #f5f5f5, #ffffff);
+    width: 100%;
+  }
+  .section__container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    width: 100%;
+  }
+  .section__container__a {
+    height: 826px;
+    margin: 20px 40px 20px 0px;
+  }
+  .section__container__b {
+    padding: 10px 30px 30px 40px;
+  }
+}
+@media all and (min-width: 1024px) {
+}
