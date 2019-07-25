@@ -4,3 +4,17 @@
     text-align: left;
     margin: 60px 0;
 }
+
+.paletteForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.palette_container {
+    height: 25px;
+    width: 90px;
+    border: black 1px solid;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}

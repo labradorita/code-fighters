@@ -1,94 +1,108 @@
+//previsualización card automatic
+.form__container__result__name {
+    position: absolute;
+    left: 40%;
+}
+
 .fillin_form {
-  display: flex;
-  flex-direction: column;
-  background-color: linear-gradient(
-    to bottom,
-    $colorIndexBackground,
-    $colorWhite
-  );
-  height: 729px;
-  width: 100%;
-  padding: 27px 19px 103px 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: linear-gradient(to bottom, $colorIndexBackground, $colorWhite);
+    height: 729px;
+    width: 100%;
+    padding: 27px 19px 103px 20px;
 }
+
 .form__container__title {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
+
 .form__ico {
-  display: flex;
-  justify-items: center;
-  align-items: center;
-  text-align: center;
-  width: 21px;
-  height: 18px;
-  margin-bottom: 28px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    width: 21px;
+    height: 18px;
+    margin-bottom: 28px;
 }
+
 .fa-keyboard {
-  font-size: $sizeText;
+    font-size: $sizeText;
 }
+
 .form__arrow__ico {
-  display: flex;
-  justify-items: center;
-  align-items: center;
-  text-align: center;
-  width: 21px;
-  height: 18px;
-  margin-bottom: 28px;
-  align-self: flex-end;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    width: 21px;
+    height: 18px;
+    margin-bottom: 28px;
+    align-self: flex-end;
 }
+
 .fa-angle-up {
-  font-size: $sizeText;
-  color: $colorTextMenu;
-  margin-left: 155px;
+    font-size: $sizeText;
+    color: $colorTextMenu;
+    margin-left: 155px;
 }
+
 .form__title {
-  font-family: $fontTertiary;
-  font-size: $sizeText;
-  color: $colorTextMenu;
-  margin-left: 10px;
-  margin-bottom: 25px;
+    font-family: $fontTertiary;
+    font-size: $sizeText;
+    color: $colorTextMenu;
+    margin-left: 10px;
+    margin-bottom: 25px;
 }
+
 .form__container {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
+
 .form__item {
-  font-family: $fontTertiary;
-  font-size: $sizeText2;
-  line-height: 1.43;
-  color: $colorTertiary;
+    font-family: $fontTertiary;
+    font-size: $sizeText2;
+    line-height: 1.43;
+    color: $colorTertiary;
 }
+
 .form__photo {
-  display: none;
+    display: none;
 }
+
 .item__rectangle {
-  width: 281px;
-  height: 30px;
-  border: solid 1px $colorQuaternary;
-  margin-top: 7px;
-  margin-bottom: 20px;
+    width: 281px;
+    height: 30px;
+    border: solid 1px $colorQuaternary;
+    margin-top: 7px;
+    margin-bottom: 20px;
 }
+
 .item__rectangle::placeholder {
-  color: #c5c5c5;
-  line-height: 1.43;
-  font-family: $fontTertiary;
-  font-size: $sizeText2;
-  padding-left: 9px;
+    color: #c5c5c5;
+    line-height: 1.43;
+    font-family: $fontTertiary;
+    font-size: $sizeText2;
+    padding-left: 9px;
 }
+
 .image__btn {
-  width: 140px;
-  height: 30px;
-  border-radius: 3px;
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
-  background-color: $colorSecondary;
-  color: $colorWhite;
-  line-height: 20px;
-  font-family: $fontTertiary;
-  font-size: $sizeText2;
-  margin-top: 7px;
-  margin-bottom: 20px;
+    width: 140px;
+    height: 30px;
+    border-radius: 3px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+    background-color: $colorSecondary;
+    color: $colorWhite;
+    line-height: 20px;
+    font-family: $fontTertiary;
+    font-size: $sizeText2;
+    margin-top: 7px;
+    margin-bottom: 20px;
 }
-@media all and (min-width: 768px) {
-}
-@media all and (min-width: 1024px) {
-}
+
+@media all and (min-width: 768px) {}
+
+@media all and (min-width: 1024px) {}
