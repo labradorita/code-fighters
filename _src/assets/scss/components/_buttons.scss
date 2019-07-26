@@ -1,61 +1,70 @@
-.landing_button {
-  height: 42px;
-  width: 129px;
-  margin: 38.6px 0 30px 0;
-  padding: 10px 20px 10px 20px;
-  font-family: $fontTertiary;
-  font-size: 16px;
-  color: $colorWhite;
-  border: 1.5px solid $colorPrimary;
-  border-radius: 30px;
-  background-color: $colorPrimary;
-
-  @media all and (min-width: 768px) {
-    margin: 186px 0 59px 0;
-  }
-}
-
-.share__btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  width: 200px;
-  background: $colorSecondary;
-  border-radius: 12px;
-  border: 0;
-  font-family: $fontTertiary;
-  color: $colorWhite;
-  font-size: 18px;
-
-  .far {
-    color: $colorWhite;
-    padding-right: 5px;
-  }
-  .sectiona__button {
-    width: 75px;
-    height: 30px;
-    border-radius: 15px;
-    border: solid 1px $colorWhite;
-    background-color: transparent;
-
-    &--text {
-      color: $colorTextMenu;
-      font-family: $fontTertiary;
-      font-weight: 400;
-      font-size: 12px;
-      text-transform: uppercase;
-      display: inline;
+    .landing_button {
+        height: 42px;
+        width: 129px;
+        margin: 38.6px 0 30px 0;
+        padding: 10px 20px 10px 20px;
+        font-family: $fontTertiary;
+        font-size: 16px;
+        color: $colorWhite;
+        border: 1.5px solid $colorPrimary;
+        border-radius: 30px;
+        background-color: $colorPrimary;
+        @media all and (min-width: 768px) {
+            margin: 186px 0 59px 0;
+        }
     }
-  }
 
-  .card__social--button {
-    width: $buttonWidth;
-    height: $buttonHeight;
-    border-radius: $buttonBorderRadius;
-    border: $buttonBorder;
-    margin-left: 10px;
-    padding: 6px;
-    color: $colorTertiary;
-  }
-}
+    .sectiona__button {
+        color: $colorTextMenu;
+        width: 75px;
+        font-family: $fontTertiary;
+        height: 30px;
+        font-weight: 400;
+        border-radius: 15px;
+        font-size: 12px;
+        border: solid 1px $colorWhite;
+        text-transform: uppercase;
+        background-color: transparent;
+    }
+
+    .share__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        width: 200px;
+        background: $colorSecondary;
+        border-radius: 12px;
+        border: 0;
+        font-family: $fontTertiary;
+        color: $colorWhite;
+        font-size: 18px;
+        .far {
+            color: $colorWhite;
+            padding-right: 5px;
+        }
+        .sectiona__button {
+            width: 75px;
+            height: 30px;
+            border-radius: 15px;
+            border: solid 1px $colorWhite;
+            background-color: transparent;
+            &--text {
+                color: $colorTextMenu;
+                font-family: $fontTertiary;
+                font-weight: 400;
+                font-size: 12px;
+                text-transform: uppercase;
+                display: inline;
+            }
+        }
+        .card__social--button {
+            width: $buttonWidth;
+            height: $buttonHeight;
+            border-radius: $buttonBorderRadius;
+            border: $buttonBorder;
+            margin-left: 10px;
+            padding: 6px;
+            color: $colorTertiary;
+        }
+    }
