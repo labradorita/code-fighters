@@ -1,107 +1,69 @@
 <div class="fillin_form">
-  <div class="form__container__title">
-    <div class="form__ico"><i class="far fa-keyboard"></i></div>
-    <h1 class="form__title">RELLENA</h1>
-    <div class="form__arrow__ico"><i class="fas fa-angle-up"></i></div>
-  </div>
-  <div class="form__container">
-    <form class="form__action" action="/signup" method="POST">
-      <div class="form__container__name">
-        <label class="form__item" for="completeName">Nombre completo</label>
-      </div>
-      <div class="form__input__name">
-        <input
-          class="item__rectangle"
-          type="text"
-          id="completeName"
-          name="completeName"
-          placeholder="Ej: Sally Jill"
-          required
-        />
-      </div>
+    <div class="form__container">
+        <div class="form__container__title">
+            <div class="form__title__items">
+                <div class="form__ico"><i class="far fa-keyboard fa-keyboard-cards"></i></div>
+                <h2 class="form__title">RELLENA</h2>
+            </div>
+            <div class="form__arrow__ico"><i class="fas fa-angle-up"></i></div>
+        </div>
+        <form class="form__action" action="/signup" method="POST">
+            <div class="form__container__name">
+                <label class="form__item preview__bio--name" for="completeName">Nombre completo</label>
+            </div>
+            <div class="form__input__name">
+                <input class="item__rectangle js-input-name" type="text" id="completeName" name="completeName" placeholder="Ej: Sally Jill" required />
+            </div>
 
-      <div class="form__container__job">
-        <label class="form__item" for="job">Puesto</label>
-      </div>
-      <div class="form__input__job">
-        <input
-          class="item__rectangle"
-          type="text"
-          id="job"
-          name="job"
-          placeholder="Ej: Front-end unicorn"
-        />
-      </div>
+            <div class="form__container__result__name">
+                <p class="p"></p>
+            </div>
 
-      <div class="form__container__photo">
-        <label class="form__item" for="photo">Imagen de perfil</label>
-      </div>
-      <div class="form__input__photo">
-        <input
-          type="file"
-          class="form__photo"
-          name="photo"
-          id="photo"
-          required
-        />
-      </div>
+            <div class="form__container__job">
+                <label class="form__item preview__bio--job" for="job">Puesto</label>
+            </div>
+            <div class="form__input__job">
+                <input class="item__rectangle js-input-job" type="text" id="job" name="job" placeholder="Ej: Front-end unicorn" />
+            </div>
 
-      <div class="form__container__btn">
-        <button class="image__btn" type="button">Añadir imagen</button>
-      </div>
+            <div class="form__container__photo">
+                <label class="form__item" for="photo">Imagen de perfil</label>
+            </div>
+            <div class="form__input__photo">
+                <input type="file" class="form__photo" name="photo" id="photo" required />
+            </div>
 
-      <div class="form__container__email">
-        <label class="form__item" for="email">Email</label>
-      </div>
-      <div class="form__input__email">
-        <input
-          class="item__rectangle"
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Ej: sally-hill@gmail.com"
-          required
-        />
-      </div>
+            <div class="form__container__btn">
+                <button class="image__btn" type="button">Añadir imagen</button>
+            </div>
 
-      <div class="form__container__phone">
-        <label class="form__item" for="phone">Teléfono</label>
-      </div>
-      <div class="form__input__phone">
-        <input
-          class="item__rectangle"
-          type="tel"
-          id="phone"
-          name="phone"
-          placeholder="Ej: 555-55-55-55"
-        />
-      </div>
+            <div class="form__container__email">
+                <label class="form__item" for="email">Email</label>
+            </div>
+            <div class="form__input__email">
+                <input class="item__rectangle" type="email" id="email" name="email" placeholder="Ej: sally-hill@gmail.com" required />
+            </div>
 
-      <div class="form__container__linkedin">
-        <label class="form__item" for="linkedin">Linkedin</label>
-      </div>
-      <div class="form__input__linkedin">
-        <input
-          class="item__rectangle"
-          type="text"
-          id="linkedin"
-          name="linkedin"
-          placeholder="Ej: linkedin.com/in/sally.hill"
-        />
-      </div>
+            <div class="form__container__phone">
+                <label class="form__item" for="phone">Teléfono</label>
+            </div>
+            <div class="form__input__phone">
+                <input class="item__rectangle" type="tel" id="phone" name="phone" placeholder="Ej: 555-55-55-55" />
+            </div>
 
-      <div class="form__container__github">
-        <label class="form__item" for="github">Github</label>
-      </div>
-      <div class="form__input__github">
-        <input
-          class="item__rectangle"
-          type="text"
-          id="github"
-          name="github"
-          placeholder="Ej: @sally-hill"
-        />
-      </div>
-    </form>
-  </div>
+            <div class="form__container__linkedin">
+                <label class="form__item" for="linkedin">Linkedin</label>
+            </div>
+            <div class="form__input__linkedin">
+                <input class="item__rectangle" type="text" id="linkedin" name="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" />
+            </div>
+
+            <div class="form__container__github">
+                <label class="form__item" for="github">Github</label>
+            </div>
+            <div class="form__input__github">
+                <input class="item__rectangle" type="text" id="github" name="github" placeholder="Ej: @sally-hill" />
+            </div>
+        </form>
+    </div>
 </div>

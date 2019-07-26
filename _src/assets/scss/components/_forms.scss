@@ -1,66 +1,62 @@
 .h2__design {
-  margin: 20px;
+    margin: 20px;
 }
 
 .design {
-  display: flex;
-  justify-content: space-between;
-
-  .h3 {
-    margin-left: 20px;
-  }
-
-  .container {
     display: flex;
-    align-items: center;
-    margin: 20px;
-
-    .box {
-      display: inline-block;
-      width: 90px;
-      height: 25px;
-      margin-left: 10px;
-      display: grid;
-      grid-template-columns: 3;
-      grid-template-rows: 1;
-      grid-gap: 0;
-
-      &__color1 {
-        grid-column: 1/2;
-        background-color: $colorTertiary;
-      }
-      &__color2 {
-        grid-column: 2/3;
-        background: $colorPrimary;
-      }
-      &__color3 {
-        grid-column: 3/4;
-        background: $colorQuaternary;
-      }
-      &__color4 {
-        grid-column: 1/2;
-        background-color: $palleteRedPrimary;
-      }
-      &__color5 {
-        grid-column: 2/3;
-        background: $palleteRedSecondary;
-      }
-      &__color6 {
-        grid-column: 3/4;
-        background: $palleteRedTertiary;
-      }
-      &__color7 {
-        grid-column: 1/2;
-        background-color: $palleteYellowPrimary;
-      }
-      &__color8 {
-        grid-column: 2/3;
-        background: $palleteYellowSecondary;
-      }
-      &__color9 {
-        grid-column: 3/4;
-        background: $palleteYellowTertiary;
-      }
+    justify-content: space-between;
+    .h3 {
+        margin-left: 20px;
     }
-  }
+    .container {
+        display: flex;
+        align-items: center;
+        margin: 20px;
+        .box {
+            display: inline-block;
+            width: 90px;
+            height: 25px;
+            margin-left: 10px;
+            display: grid;
+            grid-template-columns: 3;
+            grid-template-rows: 1;
+            grid-gap: 0;
+            &__color1 {
+                grid-column: 1/2;
+                background-color: $colorTertiary;
+            }
+            &__color2 {
+                grid-column: 2/3;
+                background: $colorPrimary;
+            }
+            &__color3 {
+                grid-column: 3/4;
+                background: $colorQuaternary;
+            }
+            &__color4 {
+                grid-column: 1/2;
+                background-color: $palleteRedPrimary;
+            }
+            &__color5 {
+                grid-column: 2/3;
+                background: $palleteRedSecondary;
+            }
+            &__color6 {
+                grid-column: 3/4;
+                background: $palleteRedTertiary;
+            }
+            &__color7 {
+                grid-column: 1/2;
+                background-color: $palleteYellowPrimary;
+            }
+            &__color8 {
+                grid-column: 2/3;
+                background: $palleteYellowSecondary;
+            }
+            &__color9 {
+                grid-column: 3/4;
+                background: $palleteYellowTertiary;
+            }
+        }
+    }
 }
