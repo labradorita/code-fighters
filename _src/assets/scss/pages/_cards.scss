@@ -81,6 +81,16 @@
     }
 }
 
+.card__social--button {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    border: solid 2px #a2deaf;
+    margin-left: 10px;
+    padding: 6px;
+    color: #114e4e;
+}
+
 @media all and (min-width: 768px) {
     .sectiona__main {
         width: 329px;
