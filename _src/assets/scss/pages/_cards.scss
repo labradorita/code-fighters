@@ -93,6 +93,7 @@
 }
 
 @media all and (min-width: 1024px) {
+    //version que habia en section_b de esta parte
     .sectiona__main {
         width: 585px;
         height: 812px;
@@ -164,5 +165,10 @@
     .item-message {
         min-height: 105px;
         padding-top: 10px;
+    }
+    // parte que tiene la nueva section a
+    .sectiona__main {
+        width: 585px;
+        height: 812px;
     }
 }
