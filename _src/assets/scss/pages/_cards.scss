@@ -41,12 +41,12 @@
     &--rectangle {
         height: 42px;
         width: 5px;
-        background: $colorPrimary;
+        // background: $colorPrimary;
     }
     &--name {
         font-family: $fontSecondary;
         font-size: 18px;
-        color: $colorTertiary;
+        // color: $colorTertiary;
         font-weight: bold;
         padding: 0 0 4px 20px;
         display: inline;
@@ -60,6 +60,46 @@
     }
 }
 
+// //cambiar los colores, color/background
+.js-box__color1 {
+    color: $colorTertiary;
+}
+
+.js-box__color2 {
+    background: $colorPrimary;
+}
+
+.js-box__color3 {
+    border: solid 2px #a2deaf;
+}
+
+//
+.js-box__color4 {
+    color: #420101;
+}
+
+.js-box__color5 {
+    background-color: #bd1010;
+}
+
+.js-box__color6 {
+    border: solid 2px #pink;
+}
+
+//
+.js-box__color7 {
+    color: $colorTertiary;
+}
+
+.js-box__color8 {
+    color: cyan;
+}
+
+.js-box__color9 {
+    color: darkblue;
+}
+
+//
 .card__image {
     width: 240px;
     height: 200px;
@@ -85,7 +125,7 @@
     width: 32px;
     height: 32px;
     border-radius: 16px;
-    border: solid 2px #a2deaf;
+    // border: solid 2px #a2deaf;
     margin-left: 10px;
     padding: 6px;
     color: #114e4e;

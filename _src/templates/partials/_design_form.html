@@ -3,8 +3,31 @@
     <!-- poner al lado del form -->
     <h3 class="h3">COLORES</h3>
     <form action="#" method="POST">
-        <partial src="./_design_color.html" option="option1" box__color1="box__color1" box__color2="box__color2" box__color3="box__color3" checked="checked"></partial>
-        <partial src="./_design_color.html" option="option2" box__color1="box__color4" box__color2="box__color5" box__color3="box__color6"></partial>
-        <partial src="./_design_color.html" option="option3" box__color1="box__color7" box__color2="box__color8" box__color3="box__color9"></partial>
+        <div class="container">
+            <input class="pallete" id="option1" type="radio" name="palette" checked="checked" />
+            <label class=" box" for="option">
+        <span class="box__color1 js-box__color1"></span>
+        <span class="box__color2 js-box__color2"></span>
+        <span class="box__color3 js-box__color3"></span>
+      </label>
+        </div>
+
+        <div class="container">
+            <input class="pallete2" id="option2" type="radio" name="palette" checked="checked" />
+            <label class=" box" for="option">
+        <span class="box__color4 js-box__color4"></span>
+        <span class="box__color5 js-box__color5"></span>
+        <span class="box__color6 js-box__color6"></span>
+      </label>
+        </div>
+
+        <div class="container">
+            <input class="pallete3" id="option3" type="radio" name="palette" checked="checked" />
+            <label class=" box" for="option">
+        <span class="box__color7 js-box__color7"></span>
+        <span class="box__color8 js-box__color8"></span>
+        <span class="box__color9 js-box__color9"></span>
+      </label>
+        </div>
     </form>
 </section>
