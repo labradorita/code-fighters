@@ -1,0 +1,49 @@
+.design {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: linear-gradient(to bottom, $colorIndexBackground, $colorWhite);
+  width: 100%;
+  padding: 27px 19px 10px 20px;
+
+  &__container {
+    display: flex;
+    width: 100%;
+    //align-items: center;
+    // justify-content: space-between;
+  }
+
+  &__title {
+    font-family: $fontTertiary;
+    font-size: $sizeText;
+    color: $colorTextMenu;
+    margin-left: 10px;
+    margin-bottom: 25px;
+
+    &__items {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__arrow__ico {
+      display: flex;
+      justify-items: center;
+      align-items: center;
+      text-align: center;
+      width: 21px;
+      height: 18px;
+      margin-bottom: 28px;
+      align-self: flex-end;
+    }
+  }
+}
+
+.fa-object-ungroup_design {
+  font-size: $sizeText;
+}
+
+.h3_colors {
+  font-size: $sizeText2;
+  color: $colorTextMenu;
+  font-family: $fontTertiary;
+}
