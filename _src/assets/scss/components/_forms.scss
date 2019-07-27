@@ -2,6 +2,15 @@
     margin: 20px;
 }
 
+.h3_colors {
+    position: absolute;
+    left: 60px;
+}
+
+.design .container {
+    width: 120px;
+}
+
 .design {
     display: flex;
     justify-content: space-between;
@@ -10,8 +19,8 @@
     }
     .container {
         display: flex;
-        align-items: center;
-        margin: 20px;
+        align-items: flex-end;
+        margin: 10px 0 10px 0;
         .box {
             display: inline-block;
             width: 90px;
