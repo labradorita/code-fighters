@@ -7,15 +7,18 @@
   .section__container {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
-    width: 100%;
+    /*     justify-content: center;
+ */ /*     width: 100%;
+ */
   }
   .section__container__a {
     height: 826px;
+    width: 50%;
     margin: 20px 40px 20px 0px;
   }
   .section__container__b {
     padding: 10px 30px 30px 40px;
+    width: 50%;
   }
 }
 @media all and (min-width: 1024px) {
