@@ -9,7 +9,7 @@
 
   &--container {
     width: 240px;
-    margin-top: 18px;
+    margin-top: 38px;
     padding-bottom: 40px;
   }
 }
@@ -32,6 +32,8 @@
 .card {
   width: 240px;
   height: 329px;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+  border-radius: 2px;
 }
 
 .preview__bio {
@@ -105,6 +107,7 @@
 }
 
 //
+
 .card__image {
   width: 240px;
   height: 200px;
@@ -139,11 +142,15 @@
 
 @media all and (min-width: 768px) {
   .sectiona__main {
-    height: 98vh;
+    height: 100vh;
     border-radius: 6px;
 
     &--container {
       /*  margin: 153px auto 260px; */
     }
+  }
+
+  .main__button--container {
+    margin-top: 150px;
   }
 }
