@@ -1,17 +1,33 @@
-<h2 class="designe">
-    DISEÑA
-</h2>
-
-<form action="/signup" method="post">
-    <p class="paletteForm">COLORES:
-        <input type="radio" name="palette" value="bluePalette" required>
-
-        <div class="palette_container">
-            <div class="color1"></div>
-            <div class="color2"></div>
-            <div class="color3"></div>
+<h2 class="form__title">DISEÑA</h2>
+<section class="design">
+    <!-- poner al lado del form -->
+    <h3 class="h3">COLORES</h3>
+    <form action="#" method="POST">
+        <div class="container">
+            <input class="pallete" id="option1" type="radio" name="palette" checked="checked" />
+            <label class=" box" for="option">
+        <span class="box__color1 "></span>
+        <span class="box__color2 "></span>
+        <span class="box__color3 "></span>
+      </label>
         </div>
 
-        <input type="radio" name="palette" value="redPalette" required>
-        <input type="radio" name="palette" value="yellowPalette" required>
-    </p>
+        <div class="container">
+            <input class="pallete2" id="option2" type="radio" name="palette" checked="checked" />
+            <label class=" box" for="option">
+        <span class="box__color4 "></span>
+        <span class="box__color5 "></span>
+        <span class="box__color6 "></span>
+      </label>
+        </div>
+
+        <div class="container">
+            <input class="pallete3" id="option3" type="radio" name="palette" checked="checked" />
+            <label class=" box" for="option">
+        <span class="box__color7 "></span>
+        <span class="box__color8 "></span>
+        <span class="box__color9 "></span>
+      </label>
+        </div>
+    </form>
+</section>

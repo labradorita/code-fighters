@@ -1,56 +1,114 @@
 "use strict";
 debugger;
 
-const name = autopreview(".js-input-name", ".preview__bio--name", "Nombre");
-const job = autopreview(".js-input-job", ".preview__bio--job", "Trabajo");
+autoPreview(".js-input-name", ".preview__bio--name", "Nombre Apellido");
+autoPreview(".js-input-job", ".preview__bio--job", "Trabajo");
 
-function autopreview(variableinput, variableout, defaultValue) {
-    const inputP = document.querySelector(variableout);
+function autoPreview(variableinput, variableoutput, defaultValue) {
+    const outputText = document.querySelector(variableoutput);
     const inputText = document.querySelector(variableinput);
 
     function changePara(event) {
         const inputValue = event.currentTarget;
-
         if (inputText.value) {
-            inputP.innerHTML = `${inputValue.value}`;
+            outputText.innerHTML = inputValue.value;
         } else {
-            inputP.innerHTML = defaultValue;
+            outputText.innerHTML = defaultValue;
             console.log(defaultValue);
         }
     }
-
     inputText.addEventListener("keyup", changePara);
 }
 
 // //
-// FUNCIONA
-// function autopreview(variableinput, variableout, defaultValue) {
-// //     const inputText = document.querySelector(variableinput);
-//     const inputP = document.querySelector(variableout);
 
-//     function changePara(event) {
-//         const inputValue = event.currentTarget;
-//         //si el defaultvalue es vacion ....
-//         console.log(defaultValue);
-//         if (inputText === document.querySelector(variableinput)) {
-//             inputP.innerHTML = `${inputValue.value}`;
-//         } else if (inputText === "") {
-//             inputP.innerHTML = defaultValue;
-//         }
-//     }
+// definir los colores, seleccionados y resultados
 
-//     inputText.addEventListener("keyup", changePara);
-// }
+const color1Choosed = document.querySelector(".js-box__color1");
+const color2Choosed = document.querySelector(".js-box__color2");
+// const color3Choosed = document.querySelector(".js-box__color3");
+//
+const color4Choosed = document.querySelector(".js-box__color4");
+const color5Choosed = document.querySelector(".js-box__color5");
+// const color6Choosed = document.querySelector(".js-box__color6");
+//
+const color7Choosed = document.querySelector(".js-box__color7");
+const color8Choosed = document.querySelector(".js-box__color8");
+// const color9Choosed = document.querySelector(".js-box__color9");
 
-//name
+//
+const color1Result = document.querySelector(".js-box1_result");
+const color2Result = document.querySelector(".js-box2_result");
+// const color3Result = document.querySelector(".js-box3_result");
 
-// const inputText = document.querySelector(".js-input-name");
+//funciones seleccionar
 
-// const inputP = document.querySelector(".preview__bio--name");
+function selectPalette1(event) {
+    console.log(event.target);
+    changePalette1(color1Result, color2Result); //color3Result);
+}
 
-// function changePara(event) {
-//     const inputValue = event.currentTarget;
-//     inputP.innerHTML = `${inputValue.value}`;
-// }
+function selectPalette2(event) {
+    console.log(event.target);
+    changePalette2(color1Result, color2Result); //color3Result);
+}
 
-// inputText.addEventListener("keyup", changePara);
+function selectPalette3(event) {
+    console.log(event.target);
+    changePalette3(color1Result, color2Result); // color3Result
+}
+
+//funcion cambiar paletas
+
+function changePalette1(color1Result, color2Result) {
+    //color3Result
+    // color1Result.classList.remove("js-box__color4");
+    // color2Result.classList.remove("js-box__color5");
+    // color3Result.classList.remove("js-box__color6");
+    color1Result.classList.remove("js-box__color4");
+    color2Result.classList.remove("js-box__color5");
+    // color3Result.classList.remove("js-box__color6");
+    color1Result.classList.remove("js-box__color7");
+    color2Result.classList.remove("js-box__color8");
+    // color3Result.classList.remove("js-box__color9");
+    color1Result.classList.add("js-box__color1");
+    color2Result.classList.add("js-box__color2");
+    // color3Result.classList.add("js-box__color3");
+}
+
+function changePalette2(color4Result, color5Result) {
+    //color6Result
+
+    color1Result.classList.remove("js-box__color7");
+    color2Result.classList.remove("js-box__color8");
+    // color3Result.classList.remove("js-box__color9");
+    color1Result.classList.remove("js-box__color1");
+    color2Result.classList.remove("js-box__color2");
+    // color3Result.classList.remove("js-box__color3");
+    color4Result.classList.add("js-box__color4");
+    color5Result.classList.add("js-box__color5");
+    // color6Result.classList.add("js-box__color6");
+}
+
+function changePalette3(color7Result, color8Result) {
+    // color9Result
+    color1Result.classList.remove("js-box__color1");
+    color2Result.classList.remove("js-box__color2");
+    // color3Result.classList.remove("js-box__color3");
+    color1Result.classList.remove("js-box__color4");
+    color2Result.classList.remove("js-box__color5");
+    // color3Result.classList.remove("js-box__color6");
+    color7Result.classList.add("js-box__color7");
+    color8Result.classList.add("js-box__color8");
+    // color9Result.classList.add("js-box__color9");
+}
+
+// listeners
+const ratioPalette1 = document.querySelector("#option1");
+ratioPalette1.addEventListener("change", selectPalette1);
+
+const ratioPalette2 = document.querySelector("#option2");
+ratioPalette2.addEventListener("change", selectPalette2);
+
+const ratioPalette3 = document.querySelector("#option3");
+ratioPalette3.addEventListener("change", selectPalette3);
