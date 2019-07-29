@@ -2,22 +2,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: linear-gradient(
-    to bottom,
-    $colorIndexBackground,
-    $colorWhite
-  );
-  height: 175px;
   width: 100%;
-  /* padding: 10px 20px 61px 23px */
-  @media all and(min-width:768px) {
-    width: 50%;
-  }
+  padding: 10px 20px 61px 23px;
 }
 
 .share__container__title {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 .share__container__items {
   display: flex;
@@ -28,19 +21,14 @@
   display: flex;
   justify-items: center;
   align-items: center;
-  text-align: center;
-  width: 21px;
-  height: 18px;
-  margin-bottom: 28px;
-  align-self: flex-end;
 }
 
 .share__title {
   font-family: $fontTertiary;
   font-size: $sizeText;
   color: $colorTextMenu;
-  margin-left: 10px;
-  margin-bottom: 25px;
+  /*   margin-left: 10px;
+  margin-bottom: 25px; */
   text-transform: uppercase;
 }
 
@@ -51,7 +39,8 @@
   text-align: center;
   width: 21px;
   height: 18px;
-  margin-bottom: 28px;
+  /*   margin-bottom: 28px;
+ */
 }
 
 .fa-share-alt-cards {
@@ -61,4 +50,5 @@
 
 .share__button {
   align-items: center;
+  margin-top: 30px;
 }

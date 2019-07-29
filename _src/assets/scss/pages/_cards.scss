@@ -1,149 +1,145 @@
 .sectiona__main {
-    background-image: linear-gradient(to bottom, $colorCardBackDark, $colorCardBackLight);
-    height: 457px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    &--container {
-        width: 240px;
-        margin-top: 18px;
-        padding-bottom: 40px;
-    }
+  background-image: linear-gradient(
+    to bottom,
+    $colorCardBackDark,
+    $colorCardBackLight
+  );
+  height: 457px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &--container {
+    width: 240px;
+    margin-top: 18px;
+    padding-bottom: 40px;
+  }
 }
 
 .main__button--container {
-    padding: 20px 20px 20px 0;
-    width: 240px;
+  padding: 20px 20px 20px 0;
+  width: 240px;
 }
 
 .sectiona__preview {
-    padding-bottom: 40px;
-    justify-content: center;
+  padding-bottom: 40px;
+  justify-content: center;
 }
 
 .reset {
-    font-family: $fontTertiary;
-    font-weight: normal;
+  font-family: $fontTertiary;
+  font-weight: normal;
 }
 
 .card {
-    width: 240px;
-    height: 329px;
+  width: 240px;
+  height: 329px;
 }
 
 .preview__bio {
-    background-color: $colorWhite;
-    //border-left: solid 5px $color-primary;
-    padding-top: 21px;
-    padding-bottom: 10px;
-    display: flex;
-    flex-direction: row;
-    &--rectangle {
-        height: 42px;
-        width: 5px;
-        // background: $colorPrimary;
-    }
-    &--name {
-        font-family: $fontSecondary;
-        font-size: 18px;
-        // color: $colorTertiary;
-        font-weight: bold;
-        padding: 0 0 4px 20px;
-        display: inline;
-    }
-    &--job {
-        color: $colorTextMenu;
-        font-family: $fontSecondary;
-        font-weight: 400;
-        font-size: 16px;
-        padding: 0 0 0 20px;
-    }
+  background-color: $colorWhite;
+  //border-left: solid 5px $color-primary;
+  padding-top: 21px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  &--rectangle {
+    height: 42px;
+    width: 5px;
+    // background: $colorPrimary;
+  }
+  &--name {
+    font-family: $fontSecondary;
+    font-size: 18px;
+    // color: $colorTertiary;
+    font-weight: bold;
+    padding: 0 0 4px 20px;
+    display: inline;
+  }
+  &--job {
+    color: $colorTextMenu;
+    font-family: $fontSecondary;
+    font-weight: 400;
+    font-size: 16px;
+    padding: 0 0 0 20px;
+  }
 }
 
 // //cambiar los colores, color/background
 .js-box__color1 {
-    color: $colorTertiary;
+  color: $colorTertiary;
 }
 
 .js-box__color2 {
-    background: $colorPrimary;
+  background: $colorPrimary;
 }
 
 .js-box__color3 {
-    border: solid 2px #a2deaf;
+  border: solid 2px #a2deaf;
 }
 
 //
 .js-box__color4 {
-    color: #420101;
+  color: #420101;
 }
 
 .js-box__color5 {
-    background-color: #bd1010;
+  background-color: #bd1010;
 }
 
 .js-box__color6 {
-    border: solid 2px #bd1010;
+    //border: solid 2px #bd1010;
 }
 
 .js-box__color7 {
-    color: #3e5b65;
+  color: #3e5b65;
 }
 
 .js-box__color8 {
-    background: #eab052;
+  background: #eab052;
 }
 
 .js-box__color9 {
-    border: solid 2px #a0c0cf;
+  border: solid 2px #a0c0cf;
 }
 
 //
 .card__image {
-    width: 240px;
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-    background-image: url($imagePath+"/homer.jpg");
+  width: 240px;
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  background-image: url($imagePath+"/homer.jpg");
 }
 
 .card__social {
-    height: 54px;
-    background: $colorWhite;
+  height: 54px;
+  background: $colorWhite;
+  display: flex;
+  &--div {
+    padding-left: 10px;
     display: flex;
-    &--div {
-        padding-left: 10px;
-        display: flex;
-        justify-items: center;
-        align-items: center;
-        text-align: center;
-    }
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .card__social--button {
-    width: 32px;
-    height: 32px;
-    border-radius: 16px;
-    border: solid 2px #a2deaf;
-    margin-left: 10px;
-    padding: 6px;
-    color: #114e4e;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  border: solid 2px #a2deaf;
+  margin-left: 10px;
+  padding: 6px;
+  color: #114e4e;
 }
 
 @media all and (min-width: 768px) {
-    .sectiona__main {
-        /*     width: 50%;
- */
-        height: 812px;
-        border-radius: 6px;
-        &--container {
-            margin: 153px auto 260px;
-        }
+  .sectiona__main {
+    height: 98vh;
+    border-radius: 6px;
+    &--container {
+      /*  margin: 153px auto 260px; */
     }
-}
-
-@media all and (min-width: 1024px) {
-    .sectiona__main {
-        height: 812px;
-    }
+  }
 }
