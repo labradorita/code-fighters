@@ -1,26 +1,30 @@
 .footer {
-    &__container {
-        display: flex;
-        color: $colorTextLight;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        padding: 20px 110px;
-        background-color: white;
-        @media all and (min-width: 768px) {
-            flex-direction: row;
-            justify-content: space-between;
-            padding: 10px 40px;
-        }
+  &__container {
+    display: flex;
+    color: $colorTextLight;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-basis: auto;
+    padding: 20px 10px;
+    background-color: white;
+    border-top: solid 1px $colorLineBorder;
+    @media all and (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 10px 40px;
     }
-    &__copy {
-        color: $colorTextLight;
-        font-family: $fontTertiary;
-        font-size: $sizeText2;
-        padding-bottom: 12px;
-    }
+  }
+  &__copy {
+    color: $colorTextLight;
+    font-family: $fontTertiary;
+    font-size: $sizeText2;
+    padding-bottom: 12px;
+    display: flex;
+    flex-basis: auto;
+  }
 }
 
 .logo__adalab {
-    height: 40px;
+  height: 40px;
 }

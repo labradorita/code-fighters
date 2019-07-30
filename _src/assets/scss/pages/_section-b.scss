@@ -42,7 +42,7 @@
   text-align: center;
   width: 21px;
   height: 18px;
-  margin-bottom: 28px;
+  margin-bottom: 25px;
   align-self: flex-end;
 }
 
@@ -58,7 +58,7 @@
   font-size: $sizeText;
   color: $colorTextMenu;
   margin-left: 10px;
-  margin-bottom: 25px;
+  // margin-bottom: 25px;
 }
 
 .form__container {
@@ -71,6 +71,14 @@
   font-size: $sizeText2;
   line-height: 1.43;
   color: $colorTertiary;
+  padding: 0;
+}
+.form__item__name {
+  font-family: $fontTertiary;
+  font-size: $sizeText2;
+  line-height: 1.43;
+  color: $colorTertiary;
+  padding: 0;
 }
 
 .form__photo {
