@@ -115,17 +115,13 @@ ratioPalette3.addEventListener("change", selectPalette3);
 
 // botón reset
 
-const reset = document.querySelector(".sectiona__button");
+const reset = document.querySelector(".js-reset");
 
-function deleteText(ev) {
-  const image = document.querySelector(".card__image");
-  const name = document.querySelector(".preview__bio--name") = "Nombre Apellido";
-  ev.preventDefault();
-  document.querySelector(".form").reset();
-  image.style.background = 'url("../../assets/images/default.jpg")';
-  name.innerHTML = "Nombre Apellido";
-  document.querySelector(".preview__bio--job".innerHTML) =
-    "Front-end developer";
+function deleteText() {
+  const image = document.querySelector(".js-card__image");
+  const formFields = document.querySelector(".js-form");
+  formFields.reset();
+  image.style.background = 'url($imagePath + "/default.jpg")';
 }
 
 reset.addEventListener("click", deleteText);
