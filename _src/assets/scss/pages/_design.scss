@@ -12,47 +12,23 @@
   background-color: linear-gradient(to bottom, $colorIndexBackground, $colorWhite);
   width: 100%;
   padding: 27px 19px 10px 20px;
-  &__container {
-    display: flex;
-    width: 100%;
-    //align-items: flex-end;
-    //align-items: center;
-    // justify-content: space-between;
-  }
-  &__title {
-    font-family: $fontTertiary;
-    font-size: $sizeText;
-    color: $colorTextMenu;
-    margin-left: 10px;
-    margin-bottom: 25px;
-    width: 100%;
-    &__items {
-      display: flex;
-      flex-direction: row;
-    }
-  }
-}
-.design__arrow__ico {
-  display: flex;
-  justify-items: flex-start;
-  align-items: center;
-  text-align: center;
-  width: 21px;
-  height: 18px;
-  // margin-bottom: 28px;
-  //align-self: flex-end;
 }
 
 .fa-object-ungroup_design {
   font-size: $sizeText;
 }
 
-.h3_colors {
-  position: absolute;
-  left: 10%;
-  font-size: $sizeText2;
-  color: $colorTextMenu;
-  font-family: $fontTertiary;
+.colors {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  &_h3 {
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: $sizeText2;
+    color: $colorTextMenu;
+    font-family: $fontTertiary;
+  }
 }
 
 .container {

@@ -3,22 +3,9 @@
   position: absolute;
   left: 40%;
 }
-.form__container {
-}
+
 .fillin_form {
-  /* height: 729px; */
   padding: 27px 19px 20px 20px;
-}
-
-.form__container__title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.form__title__items {
-  display: flex;
-  flex-direction: row;
 }
 
 .form__ico {
@@ -28,37 +15,11 @@
   text-align: center;
   width: 21px;
   height: 18px;
-  margin-bottom: 28px;
+  //margin-bottom: 28px;
 }
 
 .fa-keyboard-cards {
   font-size: $sizeText;
-}
-
-.form__arrow__ico {
-  display: flex;
-  justify-items: center;
-  align-items: center;
-  text-align: center;
-  width: 21px;
-  height: 18px;
-  margin-bottom: 25px;
-  align-self: flex-end;
-}
-
-.fa-angle-up {
-  font-size: $sizeText;
-  color: $colorTextMenu;
-  /*   margin-left: 155px;
- */
-}
-
-.form__title {
-  font-family: $fontTertiary;
-  font-size: $sizeText;
-  color: $colorTextMenu;
-  margin-left: 10px;
-  // margin-bottom: 25px;
 }
 
 .form__container {

@@ -5,37 +5,35 @@
   width: 100%;
   padding: 10px 20px 61px 23px;
 }
+.fa-angle-up {
+  font-size: $sizeText;
+  color: $colorTextMenu;
+}
 
-.share__container__title {
+.container__title {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
 }
-.share__container__items {
+.title__items {
   display: flex;
   align-items: center;
 }
 
-.share__arrow__ico {
-  // display: flex;
-  // justify-items: center;
-  // align-items: center;
-  display: flex;
-  justify-items: flex-start;
-  align-items: center;
-  text-align: center;
-  width: 21px;
-  height: 18px;
-  //align-self: flex-end;
-}
-
-.share__title {
+.title {
   font-family: $fontTertiary;
   font-size: $sizeText;
   color: $colorTextMenu;
-  margin-left: 7px;
+  margin-left: 10px;
   text-transform: uppercase;
+}
+
+.arrow__ico {
+  display: flex;
+  align-items: center;
+  width: 21px;
+  height: 18px;
 }
 
 .share__ico {
