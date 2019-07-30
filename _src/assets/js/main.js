@@ -117,6 +117,13 @@ ratioPalette3.addEventListener("change", selectPalette3);
 
 const reset = document.querySelector(".js-reset");
 
+function resetAutoprevirew() {
+  const previewName = document.querySelector(".js-box1_result");
+  const previewJob = document.querySelector(".js-preview__job");
+  previewName.innerHTML = "Nombre Apellido";
+  previewJob.innerHTML = "Front-end developer";
+}
+
 function deleteText() {
   const image = document.querySelector(".js-card__image");
   const formFields = document.querySelector(".js-form");
@@ -125,3 +132,4 @@ function deleteText() {
 }
 
 reset.addEventListener("click", deleteText);
+reset.addEventListener("click", resetAutoprevirew);
