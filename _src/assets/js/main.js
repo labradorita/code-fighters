@@ -5,19 +5,19 @@ autoPreview(".js-input-name", ".preview__bio--name", "Nombre Apellido");
 autoPreview(".js-input-job", ".preview__bio--job", "Trabajo");
 
 function autoPreview(variableinput, variableoutput, defaultValue) {
-    const outputText = document.querySelector(variableoutput);
-    const inputText = document.querySelector(variableinput);
+  const outputText = document.querySelector(variableoutput);
+  const inputText = document.querySelector(variableinput);
 
-    function changePara(event) {
-        const inputValue = event.currentTarget;
-        if (inputText.value) {
-            outputText.innerHTML = inputValue.value;
-        } else {
-            outputText.innerHTML = defaultValue;
-            console.log(defaultValue);
-        }
+  function changePara(event) {
+    const inputValue = event.currentTarget;
+    if (inputText.value) {
+      outputText.innerHTML = inputValue.value;
+    } else {
+      outputText.innerHTML = defaultValue;
+      console.log(defaultValue);
     }
-    inputText.addEventListener("keyup", changePara);
+  }
+  inputText.addEventListener("keyup", changePara);
 }
 
 // //
@@ -44,63 +44,63 @@ const color2Result = document.querySelector(".js-box2_result");
 //funciones seleccionar
 
 function selectPalette1(event) {
-    console.log(event.target);
-    changePalette1(color1Result, color2Result); //color3Result);
+  console.log(event.target);
+  changePalette1(color1Result, color2Result); //color3Result);
 }
 
 function selectPalette2(event) {
-    console.log(event.target);
-    changePalette2(color1Result, color2Result); //color3Result);
+  console.log(event.target);
+  changePalette2(color1Result, color2Result); //color3Result);
 }
 
 function selectPalette3(event) {
-    console.log(event.target);
-    changePalette3(color1Result, color2Result); // color3Result
+  console.log(event.target);
+  changePalette3(color1Result, color2Result); // color3Result
 }
 
 //funcion cambiar paletas
 
 function changePalette1(color1Result, color2Result) {
-    //color3Result
-    // color1Result.classList.remove("js-box__color4");
-    // color2Result.classList.remove("js-box__color5");
-    // color3Result.classList.remove("js-box__color6");
-    color1Result.classList.remove("js-box__color4");
-    color2Result.classList.remove("js-box__color5");
-    // color3Result.classList.remove("js-box__color6");
-    color1Result.classList.remove("js-box__color7");
-    color2Result.classList.remove("js-box__color8");
-    // color3Result.classList.remove("js-box__color9");
-    color1Result.classList.add("js-box__color1");
-    color2Result.classList.add("js-box__color2");
-    // color3Result.classList.add("js-box__color3");
+  //color3Result
+  // color1Result.classList.remove("js-box__color4");
+  // color2Result.classList.remove("js-box__color5");
+  // color3Result.classList.remove("js-box__color6");
+  color1Result.classList.remove("js-box__color4");
+  color2Result.classList.remove("js-box__color5");
+  // color3Result.classList.remove("js-box__color6");
+  color1Result.classList.remove("js-box__color7");
+  color2Result.classList.remove("js-box__color8");
+  // color3Result.classList.remove("js-box__color9");
+  color1Result.classList.add("js-box__color1");
+  color2Result.classList.add("js-box__color2");
+  // color3Result.classList.add("js-box__color3");
 }
 
 function changePalette2(color4Result, color5Result) {
-    //color6Result
+  //color6Result
 
-    color1Result.classList.remove("js-box__color7");
-    color2Result.classList.remove("js-box__color8");
-    // color3Result.classList.remove("js-box__color9");
-    color1Result.classList.remove("js-box__color1");
-    color2Result.classList.remove("js-box__color2");
-    // color3Result.classList.remove("js-box__color3");
-    color4Result.classList.add("js-box__color4");
-    color5Result.classList.add("js-box__color5");
-    // color6Result.classList.add("js-box__color6");
+  color1Result.classList.remove("js-box__color7");
+  color2Result.classList.remove("js-box__color8");
+  // color3Result.classList.remove("js-box__color9");
+  color1Result.classList.remove("js-box__color1");
+  color2Result.classList.remove("js-box__color2");
+  // color3Result.classList.remove("js-box__color3");
+  color4Result.classList.add("js-box__color4");
+  color5Result.classList.add("js-box__color5");
+  // color6Result.classList.add("js-box__color6");
 }
 
 function changePalette3(color7Result, color8Result) {
-    // color9Result
-    color1Result.classList.remove("js-box__color1");
-    color2Result.classList.remove("js-box__color2");
-    // color3Result.classList.remove("js-box__color3");
-    color1Result.classList.remove("js-box__color4");
-    color2Result.classList.remove("js-box__color5");
-    // color3Result.classList.remove("js-box__color6");
-    color7Result.classList.add("js-box__color7");
-    color8Result.classList.add("js-box__color8");
-    // color9Result.classList.add("js-box__color9");
+  // color9Result
+  color1Result.classList.remove("js-box__color1");
+  color2Result.classList.remove("js-box__color2");
+  // color3Result.classList.remove("js-box__color3");
+  color1Result.classList.remove("js-box__color4");
+  color2Result.classList.remove("js-box__color5");
+  // color3Result.classList.remove("js-box__color6");
+  color7Result.classList.add("js-box__color7");
+  color8Result.classList.add("js-box__color8");
+  // color9Result.classList.add("js-box__color9");
 }
 
 // listeners
@@ -112,3 +112,33 @@ ratioPalette2.addEventListener("change", selectPalette2);
 
 const ratioPalette3 = document.querySelector("#option3");
 ratioPalette3.addEventListener("change", selectPalette3);
+
+// botón reset
+const reset = document.querySelector(".js-reset");
+function resetAutoprevirew() {
+  const previewName = document.querySelector(".js-box1_result");
+  const previewJob = document.querySelector(".js-preview__job");
+  previewName.innerHTML = "Nombre Apellido";
+  previewJob.innerHTML = "Front-end developer";
+}
+function deleteText() {
+  const image = document.querySelector(".js-card__image");
+  const formFields = document.querySelector(".js-form");
+  const preview = document.querySelector(".preview");
+  formFields.reset(); //Reseteamos el formulario
+  preview.src = " "; //Dejamos en blanco para que no meta imagen
+  image.style.backgroundImage = "url(../../assets/images/default.jpg)";
+}
+reset.addEventListener("click", deleteText);
+reset.addEventListener("click", resetAutoprevirew);
+// imagen preview
+const browse = document.querySelector(".hidden");
+const loadFile = function(event) {
+  let preview = document.querySelector(".preview");
+  let cardImage = document.querySelector(".js-card__image");
+  preview.src = URL.createObjectURL(event.target.files[0]);
+  cardImage.style.backgroundImage = `url(${URL.createObjectURL(
+    event.target.files[0]
+  )})`;
+};
+browse.addEventListener("change", loadFile);
