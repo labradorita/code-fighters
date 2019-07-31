@@ -55,3 +55,18 @@
   align-items: center;
   margin-top: 30px;
 }
+
+.js-collapsible__content {
+  display: none;
+  overflow: hidden;
+}
+.js-collapsible--open .js-ico {
+  transform: translateX(-50%) rotate(-180deg);
+}
+.js-collapsible--open .js-collapsible__content {
+  display: block;
+}
+
+.js-collapsible__trigger {
+  cursor: pointer;
+}
