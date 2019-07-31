@@ -1,108 +1,109 @@
 .container_palettes {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .design {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: linear-gradient(to bottom, $colorIndexBackground, $colorWhite);
-  width: 100%;
-  padding: 27px 19px 10px 20px;
-  &__container {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: linear-gradient(to bottom, $colorIndexBackground, $colorWhite);
     width: 100%;
-    //align-items: flex-end;
-    //align-items: center;
-    // justify-content: space-between;
-  }
-  &__title {
-    font-family: $fontTertiary;
-    font-size: $sizeText;
-    color: $colorTextMenu;
-    margin-left: 10px;
-    margin-bottom: 25px;
-    width: 100%;
-    &__items {
-      display: flex;
-      flex-direction: row;
+    padding: 27px 19px 10px 20px;
+    &__container {
+        display: flex;
+        width: 100%;
+        //align-items: flex-end;
+        //align-items: center;
+        // justify-content: space-between;
     }
-  }
+    &__title {
+        font-family: $fontTertiary;
+        font-size: $sizeText;
+        color: $colorTextMenu;
+        margin-left: 10px;
+        margin-bottom: 25px;
+        width: 100%;
+        &__items {
+            display: flex;
+            flex-direction: row;
+        }
+    }
 }
+
 .design__arrow__ico {
-  display: flex;
-  justify-items: flex-start;
-  align-items: center;
-  text-align: center;
-  width: 21px;
-  height: 18px;
-  // margin-bottom: 28px;
-  //align-self: flex-end;
+    display: flex;
+    justify-items: flex-start;
+    align-items: center;
+    text-align: center;
+    width: 21px;
+    height: 18px;
+    // margin-bottom: 28px;
+    //align-self: flex-end;
 }
 
 .fa-object-ungroup_design {
-  font-size: $sizeText;
+    font-size: $sizeText;
 }
 
 .h3_colors {
-  position: absolute;
-  left: 10%;
-  font-size: $sizeText2;
-  color: $colorTextMenu;
-  font-family: $fontTertiary;
+    position: absolute;
+    left: 10%;
+    font-size: $sizeText2;
+    color: $colorTextMenu;
+    font-family: $fontTertiary;
 }
 
 .container {
-  display: flex;
-  align-items: flex-end;
-  margin: 10px 0 10px 0;
-  .box {
-    display: inline-block;
-    width: 90px;
-    height: 25px;
-    margin-left: 10px;
-    display: grid;
-    grid-template-columns: 3;
-    grid-template-rows: 1;
-    grid-gap: 0;
-    &__color1 {
-      grid-column: 1/2;
-      background-color: $colorTertiary;
+    display: flex;
+    align-items: flex-end;
+    margin: 10px 0 10px 0;
+    .box {
+        display: inline-block;
+        width: 90px;
+        height: 25px;
+        margin-left: 10px;
+        display: grid;
+        grid-template-columns: 3;
+        grid-template-rows: 1;
+        grid-gap: 0;
+        &__color1 {
+            grid-column: 1/2;
+            background-color: $color1Palette1;
+        }
+        &__color2 {
+            grid-column: 2/3;
+            background: $color2Palette1;
+        }
+        &__color3 {
+            grid-column: 3/4;
+            background: $color3Palette1;
+        }
+        &__color4 {
+            grid-column: 1/2;
+            background-color: $color1Palette2;
+        }
+        &__color5 {
+            grid-column: 2/3;
+            background: $color2Palette2;
+        }
+        &__color6 {
+            grid-column: 3/4;
+            background: $color3Palette2;
+        }
+        &__color7 {
+            grid-column: 1/2;
+            background-color: $color1Palette3;
+        }
+        &__color8 {
+            grid-column: 2/3;
+            background: $color2Palette3;
+        }
+        &__color9 {
+            grid-column: 3/4;
+            background: $color3Palette3;
+        }
     }
-    &__color2 {
-      grid-column: 2/3;
-      background: $colorPrimary;
-    }
-    &__color3 {
-      grid-column: 3/4;
-      background: $colorQuaternary;
-    }
-    &__color4 {
-      grid-column: 1/2;
-      background-color: $palleteRedPrimary;
-    }
-    &__color5 {
-      grid-column: 2/3;
-      background: $palleteRedSecondary;
-    }
-    &__color6 {
-      grid-column: 3/4;
-      background: $palleteRedTertiary;
-    }
-    &__color7 {
-      grid-column: 1/2;
-      background-color: $palleteYellowPrimary;
-    }
-    &__color8 {
-      grid-column: 2/3;
-      background: $palleteYellowSecondary;
-    }
-    &__color9 {
-      grid-column: 3/4;
-      background: $palleteYellowTertiary;
-    }
-  }
 }
