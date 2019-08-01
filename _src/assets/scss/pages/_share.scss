@@ -1,12 +1,9 @@
 .share {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
-  margin: 10px 0 10px 0;
-
   &__button {
     align-items: center;
     margin-top: 30px;
+    display: flex;
+    justify-content: center;
   }
 }
