@@ -1,87 +1,53 @@
-//previsualización card automatic
-.form__container__result__name {
-  position: absolute;
-  left: 40%;
+.form {
+  margin: 27px 20px 20px 20px;
 }
-
-.fillin_form {
-  padding: 27px 19px 20px 20px;
-}
-
-.form__ico {
+.container__title {
   display: flex;
-  justify-items: center;
   align-items: center;
-  text-align: center;
-  width: 21px;
-  height: 18px;
-  //margin-bottom: 28px;
-}
-
-.fa-keyboard-cards {
-  font-size: $sizeText;
-}
-
-.form__container {
-  display: flex;
-  flex-direction: column;
-}
-
-.form__item {
-  font-family: $fontTertiary;
-  font-size: $sizeText2;
-  line-height: 1.43;
-  color: $colorTertiary;
-  padding: 0;
-}
-.form__item__name {
-  font-family: $fontTertiary;
-  font-size: $sizeText2;
-  line-height: 1.43;
-  color: $colorTertiary;
-  padding: 0;
-}
-
-.form__photo {
-  display: none;
-}
-
-.item__rectangle {
+  justify-content: space-between;
   width: 100%;
-  height: 30px;
-  border: solid 1px $colorQuaternary;
-  margin-top: 7px;
-  margin-bottom: 20px;
+  padding: 20px 0 20px 0;
+  border-bottom: solid $colorTextLight 2px;
 }
-
-.item__rectangle::placeholder {
-  color: #c5c5c5;
-  line-height: 1.43;
-  font-family: $fontTertiary;
-  font-size: $sizeText2;
-  padding-left: 9px;
-}
-
-.image__btn {
-  width: 140px;
-  height: 30px;
-  border-radius: 3px;
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
-  background-color: $colorSecondary;
-  color: $colorWhite;
-  line-height: 20px;
-  font-family: $fontTertiary;
-  font-size: $sizeText2;
-  margin-top: 7px;
-  margin-bottom: 20px;
-}
-
-@media all and (min-width: 768px) {
-  .fillin_form {
+.title__items {
+  display: flex;
+  align-items: center;
+  &__ico {
+    font-size: $sizeText;
+    color: $colorSecondary;
   }
-  form {
+  .title {
+    font-family: $fontTertiary;
+    font-size: $sizeText;
+    color: $colorTextMenu;
+    margin-left: 10px;
+    text-transform: uppercase;
+  }
+  .fa-angle-up {
+    font-size: $sizeText;
+    color: $colorTextMenu;
+
+    width: 21px;
+    height: 18px;
   }
 }
 
-@media all and (min-width: 1024px) {
+.content {
+  margin: 15px 0 10px 0;
+  width: 100%;
+}
+
+.js-collapsible__content {
+  display: none;
+  overflow: hidden;
+}
+.js-collapsible--open .js-ico {
+  transform: translateX(-50%) rotate(-180deg);
+}
+.js-collapsible--open .js-collapsible__content {
+  display: block;
+}
+
+.js-collapsible__trigger {
+  cursor: pointer;
 }

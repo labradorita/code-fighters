@@ -1,9 +1,5 @@
 .sectiona__main {
-  background-image: linear-gradient(
-    to bottom,
-    $colorCardBackDark,
-    $colorCardBackLight
-  );
+  background-image: linear-gradient(to bottom, $colorCardBackDark, $colorCardBackLight);
   height: 457px;
   display: flex;
   flex-direction: column;
@@ -37,7 +33,7 @@
 
 .preview__bio {
   background-color: $colorWhite;
-  //border-left: solid 5px $color-primary;
+
   padding-top: 21px;
   padding-bottom: 10px;
   display: flex;
@@ -45,12 +41,10 @@
   &--rectangle {
     height: 42px;
     width: 5px;
-    // background: $colorPrimary;
   }
   &--name {
     font-family: $fontSecondary;
     font-size: 18px;
-    // color: $colorTertiary;
     font-weight: bold;
     padding: 0 0 4px 20px;
     display: inline;
@@ -87,7 +81,7 @@
 }
 
 .js-box__color6 {
-    //border: solid 2px #bd1010;
+  //border: solid 2px #bd1010;
 }
 
 .js-box__color7 {

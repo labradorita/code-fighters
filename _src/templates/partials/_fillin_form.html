@@ -1,71 +1,48 @@
-<div class="fillin_form ">
+<div class="fillin ">
   <div class="container__title js-collapsible__trigger">
     <div class="title__items">
-      <div class="form__ico">
-        <i class="far fa-keyboard fa-keyboard-cards"></i>
+      <div>
+        <i class="title__items__ico  far fa-keyboard"></i>
       </div>
       <h2 class="title">Rellena</h2>
     </div>
-    <div class="arrow__ico js-ico "><i class="fas fa-angle-up"></i></div>
+    <div class="js-ico "><i class="fas fa-angle-up"></i></div>
   </div>
-  <div class="js-collapsible__content">
-    <div class="form__action js-collapsible__content">
-      <div class="form__container__name">
-        <label class="form__item form__item__name preview__bio--name" for="completeName">Nombre completo</label>
-      </div>
-      <div class="form__input__name">
-        <input class="item__rectangle js-input-name" type="text" id="completeName" name="completeName" placeholder="Ej: Sally Jill" required />
-      </div>
+  <div class="js-collapsible__content content">
+    <div class="name">
+      <label class="form__item" for="completeName">Nombre completo</label>
+      <input class="item__input js-input-name" type="text" id="completeName" name="completeName" placeholder="Ej: Sally Jill" required />
+    </div>
 
-      <div class="form__container__result__name">
-        <p class="p"></p>
-      </div>
+    <div class="job">
+      <label class="form__item" for="job">Puesto</label>
+      <input class="item__input js-input-job" type="text" id="job" name="job" placeholder="Ej: Front-end unicorn" />
+    </div>
 
-      <div class="form__container__job">
-        <label class="form__item preview__bio--job" for="job">Puesto</label>
-      </div>
-      <div class="form__input__job">
-        <input class="item__rectangle js-input-job" type="text" id="job" name="job" placeholder="Ej: Front-end unicorn" />
-      </div>
+    <div class="photo">
+      <label class="form__item" for="photo">Imagen de perfil</label>
+      <input type="file" class="form__photo" name="photo" id="photo" required />
+      <button class="image__btn" type="button">Añadir imagen</button>
+    </div>
 
-      <div class="form__container__photo">
-        <label class="form__item" for="photo">Imagen de perfil</label>
-      </div>
-      <div class="form__input__photo">
-        <input type="file" class="form__photo" name="photo" id="photo" required />
-      </div>
+    <div class="email">
+      <label class="form__item" for="email">Email</label>
+      <input class="item__input" type="email" id="email" name="email" placeholder="Ej: sally-hill@gmail.com" required />
+    </div>
 
-      <div class="form__container__btn">
-        <button class="image__btn" type="button">Añadir imagen</button>
-      </div>
+    <div class="phone">
+      <label class="form__item" for="phone">Teléfono</label>
+      <input class="item__input" type="tel" id="phone" name="phone" placeholder="Ej: 555-55-55-55" />
+    </div>
 
-      <div class="form__container__email">
-        <label class="form__item" for="email">Email</label>
-      </div>
-      <div class="form__input__email">
-        <input class="item__rectangle" type="email" id="email" name="email" placeholder="Ej: sally-hill@gmail.com" required />
-      </div>
+    <div class="linkedin">
+      <label class="form__item" for="linkedin">Linkedin</label>
+      <input class="item__input" type="text" id="linkedin" name="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" />
+    </div>
 
-      <div class="form__container__phone">
-        <label class="form__item" for="phone">Teléfono</label>
-      </div>
-      <div class="form__input__phone">
-        <input class="item__rectangle" type="tel" id="phone" name="phone" placeholder="Ej: 555-55-55-55" />
-      </div>
-
-      <div class="form__container__linkedin">
-        <label class="form__item" for="linkedin">Linkedin</label>
-      </div>
-      <div class="form__input__linkedin">
-        <input class="item__rectangle" type="text" id="linkedin" name="linkedin" placeholder="Ej: linkedin.com/in/sally.hill" />
-      </div>
-
-      <div class="form__container__github">
-        <label class="form__item" for="github">Github</label>
-      </div>
-      <div class="form__input__github">
-        <input class="item__rectangle" type="text" id="github" name="github" placeholder="Ej: @sally-hill" />
-      </div>
+    <div class="github">
+      <label class="form__item" for="github">Github</label>
+      <input class="item__input" type="text" id="github" name="github" placeholder="Ej: @sally-hill" />
     </div>
   </div>
 </div>

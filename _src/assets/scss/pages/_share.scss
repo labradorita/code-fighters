@@ -1,72 +1,12 @@
-.share_form {
+.share {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 10px 20px 61px 23px;
-}
-.fa-angle-up {
-  font-size: $sizeText;
-  color: $colorTextMenu;
-}
+  margin: 10px 0 10px 0;
 
-.container__title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-}
-.title__items {
-  display: flex;
-  align-items: center;
-}
-
-.title {
-  font-family: $fontTertiary;
-  font-size: $sizeText;
-  color: $colorTextMenu;
-  margin-left: 10px;
-  text-transform: uppercase;
-}
-
-.arrow__ico {
-  display: flex;
-  align-items: center;
-  width: 21px;
-  height: 18px;
-}
-
-.share__ico {
-  display: flex;
-  justify-items: center;
-  align-items: center;
-  text-align: center;
-  width: 21px;
-  height: 18px;
-  /*margin-bottom: 28px;*/
-}
-
-.fa-share-alt-cards {
-  font-size: $sizeText;
-  color: $colorSecondary;
-}
-
-.share__button {
-  align-items: center;
-  margin-top: 30px;
-}
-
-.js-collapsible__content {
-  display: none;
-  overflow: hidden;
-}
-.js-collapsible--open .js-ico {
-  transform: translateX(-50%) rotate(-180deg);
-}
-.js-collapsible--open .js-collapsible__content {
-  display: block;
-}
-
-.js-collapsible__trigger {
-  cursor: pointer;
+  &__button {
+    align-items: center;
+    margin-top: 30px;
+  }
 }
