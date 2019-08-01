@@ -30,6 +30,8 @@
 .card {
   width: 240px;
   height: 329px;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+  border-radius: 2px;
 }
 
 .preview__bio {
