@@ -40,6 +40,10 @@ document.querySelector("#option2").addEventListener("change", selectPalette2);
 document.querySelector("#option3").addEventListener("change", selectPalette3);
 
 
+
+
+
+
 // // function preview palettes
 
 // // clase madre que va a contener clase paleta, y derivan estilos a hijos
