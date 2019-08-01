@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
   &--container {
     width: 240px;
     margin-top: 18px;
@@ -38,10 +39,12 @@
   padding-bottom: 10px;
   display: flex;
   flex-direction: row;
+
   &--rectangle {
     height: 42px;
     width: 5px;
   }
+
   &--name {
     font-family: $fontSecondary;
     font-size: 18px;
@@ -49,6 +52,7 @@
     padding: 0 0 4px 20px;
     display: inline;
   }
+
   &--job {
     color: $colorTextMenu;
     font-family: $fontSecondary;
@@ -102,13 +106,14 @@
   height: 200px;
   background-size: cover;
   background-position: center;
-  background-image: url($imagePath+"/homer.jpg");
+  background-image: url($imagePath+"/default.jpg");
 }
 
 .card__social {
   height: 54px;
   background: $colorWhite;
   display: flex;
+
   &--div {
     padding-left: 10px;
     display: flex;
@@ -132,6 +137,7 @@
   .sectiona__main {
     height: 98vh;
     border-radius: 6px;
+
     &--container {
       /*  margin: 153px auto 260px; */
     }

@@ -23,8 +23,12 @@
   font-size: $sizeText2;
 }
 
+.photo__container {
+  display: flex;
+  align-items: center;
+}
+
 .image__btn {
-  display: block;
   width: 140px;
   height: 30px;
   border-radius: 3px;
@@ -36,4 +40,16 @@
   font-size: $sizeText2;
   margin-top: 10px;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.preview {
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  margin-bottom: 8px;
+  border: solid 1px $colorQuaternary;
 }
