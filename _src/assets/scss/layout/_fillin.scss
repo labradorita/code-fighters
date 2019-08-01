@@ -1,0 +1,39 @@
+//previsualización card automatic
+.form__item {
+  font-family: $fontTertiary;
+  font-size: $sizeText2;
+  color: $colorTertiary;
+}
+
+.form__photo {
+  display: none;
+}
+
+.item__input {
+  width: 100%;
+  height: 30px;
+  border: solid 1px $colorQuaternary;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.item__input::placeholder {
+  color: #c5c5c5;
+  font-family: $fontTertiary;
+  font-size: $sizeText2;
+}
+
+.image__btn {
+  display: block;
+  width: 140px;
+  height: 30px;
+  border-radius: 3px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+  background-color: $colorSecondary;
+  color: $colorWhite;
+  line-height: 20px;
+  font-family: $fontTertiary;
+  font-size: $sizeText2;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
