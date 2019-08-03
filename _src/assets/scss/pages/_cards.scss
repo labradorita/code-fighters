@@ -88,7 +88,11 @@
     border: solid 2px #a2deaf;
     margin-left: 10px;
     padding: 6px;
-    color: #114e4e;
+    color: lightgrey;
+}
+
+.icon-button {
+    background-color: green;
 }
 
 @media all and (min-width: 768px) {
