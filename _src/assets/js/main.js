@@ -66,8 +66,14 @@ const reset = document.querySelector(".js-sectiona__buton");
 function resetAutopreview() {
     const previewName = document.querySelector(".js-box1_result");
     const previewJob = document.querySelector(".js-preview__job");
+    const iconsUsed = document.querySelectorAll(".js-icon-preview");
+
     previewName.innerHTML = "Nombre Apellido";
     previewJob.innerHTML = "Front-end developer";
+
+    for (const iconUsed of iconsUsed) {
+        iconUsed.style.color = "lightgrey";
+    }
 }
 
 function deleteText() {
@@ -78,6 +84,7 @@ function deleteText() {
     preview.src = " "; //Dejamos en blanco para que no meta imagen
     image.style.backgroundImage = "url(../../assets/images/default.jpg)";
 }
+
 reset.addEventListener("click", deleteText);
 reset.addEventListener("click", resetAutopreview);
 
@@ -91,7 +98,7 @@ const loadFile = function(event) {
 };
 browse.addEventListener("change", loadFile);
 
-// icon changes with info
+// icon changes with info & reset in case there aren't inputs
 
 function changeIconColor(variableinput, classInput, classIcon) {
     const classIconUsed = document.querySelector(classIcon);
