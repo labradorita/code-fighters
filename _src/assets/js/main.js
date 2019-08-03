@@ -90,3 +90,19 @@ const loadFile = function(event) {
     cardImage.style.backgroundImage = `url(${URL.createObjectURL(event.target.files[0])})`;
 };
 browse.addEventListener("change", loadFile);
+
+// icon changes with info
+
+function changeIconColor(classInput, classIcon) {
+    const classIconUsed = document.querySelector(classIcon);
+    const handle = function() {
+        // classIconUsed.style.background = "#dde9ed";
+        classIconUsed.style.color = "#114e4e";
+    };
+    document.querySelector(classInput).addEventListener("keyup", handle);
+}
+
+changeIconColor("#phone", ".js-icon-phone");
+changeIconColor("#email", ".js-icon-email");
+changeIconColor("#github", ".js-icon-github");
+changeIconColor("#linkedin", ".js-icon-linkedin");
