@@ -118,3 +118,23 @@ changeIconColor(".js-input-phone", "#phone", ".js-icon-phone");
 changeIconColor(".js-input-email", "#email", ".js-icon-email");
 changeIconColor(".js-input-github", "#github", ".js-icon-github");
 changeIconColor(".js-input-linkedin", "#linkedin", ".js-icon-linkedin");
+
+// icon clickables when you write email,github & linkedin
+
+function changeLinkIcon(variableinput, classIcon) {
+    const classIconUsed = document.querySelector(classIcon);
+    const inputText = document.querySelector(variableinput);
+
+    const handle = function() {
+        if (inputText.value.startsWith("http://") || inputText.value.startsWith("https://")) {
+            classIconUsed.href = inputText.value;
+        } else {
+            classIconUsed.href = `http://${inputText.value}`;
+        }
+    };
+    document.querySelector(variableinput).addEventListener("keyup", handle);
+}
+
+changeLinkIcon(".js-input-email", ".js-icon-link-email");
+changeLinkIcon(".js-input-github", ".js-icon-link-github");
+changeLinkIcon(".js-input-linkedin", ".js-icon-link-linkedin");
