@@ -93,16 +93,56 @@ browse.addEventListener("change", loadFile);
 
 // icon changes with info
 
-function changeIconColor(classInput, classIcon) {
+function changeIconColor(variableinput, classInput, classIcon) {
     const classIconUsed = document.querySelector(classIcon);
+    const inputText = document.querySelector(variableinput);
+
     const handle = function() {
-        // classIconUsed.style.background = "#dde9ed";
-        classIconUsed.style.color = "#114e4e";
+        if (inputText.value) {
+            classIconUsed.style.color = "#114e4e";
+        } else {
+            classIconUsed.style.color = "lightgrey";
+        }
     };
     document.querySelector(classInput).addEventListener("keyup", handle);
 }
 
-changeIconColor("#phone", ".js-icon-phone");
-changeIconColor("#email", ".js-icon-email");
-changeIconColor("#github", ".js-icon-github");
-changeIconColor("#linkedin", ".js-icon-linkedin");
+changeIconColor(".js-input-phone", "#phone", ".js-icon-phone");
+changeIconColor(".js-input-email", "#email", ".js-icon-email");
+changeIconColor(".js-input-github", "#github", ".js-icon-github");
+changeIconColor(".js-input-linkedin", "#linkedin", ".js-icon-linkedin");
+
+// function changeIconColor(inputText, classInput, classIcon, defaultValueIcon) {
+//   const classIconUsed = document.querySelector(classIcon);
+//   const inputText = document.querySelector(inputText);
+//   const handle = function() {
+//       const inputValue = event.currentTarget;
+//       if (inputText.value) {
+//           classIconUsed.href = inputValue.value;
+//           classIconUsed.style.color = "#114e4e";
+//       } else {
+//           classIconUsed.style.color = "grey";
+//       }
+//   };
+//   document.querySelector(classInput).addEventListener("keyup", handle);
+// }
+
+// changeIconColor(".js-input-phone", "#phone", ".js-icon-phone");
+// changeIconColor(".js-input-email", "#email", ".js-icon-email");
+// changeIconColor(".js-input-github", "#github", ".js-icon-github");
+// changeIconColor(".js-input-linkedin", "#linkedin", ".js-icon-linkedin");
+
+// FUNCIONA
+// function changeIconColor(classInput, classIcon) {
+//   const classIconUsed = document.querySelector(classIcon);
+//   const handle = function() {
+//       // classIconUsed.style.background = "#dde9ed";
+//       classIconUsed.style.color = "#114e4e";
+//   };
+//   document.querySelector(classInput).addEventListener("keyup", handle);
+// }
+
+// changeIconColor("#phone", ".js-icon-phone");
+// changeIconColor("#email", ".js-icon-email");
+// changeIconColor("#github", ".js-icon-github");
+// changeIconColor("#linkedin", ".js-icon-linkedin");
