@@ -1,0 +1,62 @@
+.container_palettes .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 117px;
+    height: 100%;
+}
+
+.radio-palette {
+    display: none;
+}
+
+.radio-palette-visible {
+    box-sizing: border-box;
+    width: 17px;
+    height: 17px;
+    border-radius: 50px;
+    z-index: 99;
+    background-color: white;
+    border: 2px solid lightgrey;
+}
+
+.radio-palette-selected {
+    background-color: white;
+    border: 6px solid #2196F3;
+}
+
+.palette1 {
+    .preview__bio--name {
+        color: $color1Palette1;
+    }
+    .preview__bio--rectangle {
+        background: $color2Palette1;
+    }
+    .card__social--button {
+        border: solid 2px $color3Palette1;
+    }
+}
+
+.palette2 {
+    .preview__bio--name {
+        color: $color1Palette2;
+    }
+    .preview__bio--rectangle {
+        background: $color2Palette2;
+    }
+    .card__social--button {
+        border: solid 2px $color3Palette2;
+    }
+}
+
+.palette3 {
+    .preview__bio--name {
+        color: $color1Palette3;
+    }
+    .preview__bio--rectangle {
+        background: $color2Palette3;
+    }
+    .card__social--button {
+        border: solid 2px $color3Palette3;
+    }
+}
