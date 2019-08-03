@@ -36,7 +36,9 @@
     height: 18px;
   }
 }
-
+.asterisk {
+  color: red;
+}
 @media all and (min-width: 768px) {
   .section__container {
     background-image: linear-gradient(to bottom, #f5f5f5, #ffffff);
