@@ -16,6 +16,7 @@
     font-size: $sizeText2;
     color: $colorTextMenu;
     font-family: $fontTertiary;
+    text-transform: uppercase;
   }
 }
 .container_palettes {
@@ -75,5 +76,51 @@
       grid-column: 3/4;
       background: $palleteYellowTertiary;
     }
+  }
+}
+
+.typography {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 10px;
+  &_h3 {
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: $sizeText2;
+    color: $colorTextMenu;
+    font-family: $fontTertiary;
+    text-transform: uppercase;
+  }
+}
+
+.container_typography {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.container_typo {
+  display: flex;
+  align-items: center;
+  margin: 10px 0 10px 0;
+  .box_typo {
+    display: inline-block;
+    width: 90px;
+    margin-left: 10px;
+    display: flex;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-size: $sizeText;
+  }
+  .box_typo_prim {
+    font-family: $fontOptionalPrimary;
+  }
+  .box_typo_sec {
+    font-family: $fontOptionalSecondary;
+  }
+  .box_typo_ter {
+    font-family: $fontOptionalTertiary;
   }
 }
