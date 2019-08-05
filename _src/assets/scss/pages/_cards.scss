@@ -1,147 +1,106 @@
 .sectiona__main {
-  background-image: linear-gradient(to bottom, $colorCardBackDark, $colorCardBackLight);
-  height: 457px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  &--container {
-    width: 240px;
-    margin-top: 18px;
-    padding-bottom: 40px;
-  }
+    background-image: linear-gradient(to bottom, $colorCardBackDark, $colorCardBackLight);
+    height: 457px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &--container {
+        width: 240px;
+        margin-top: 18px;
+        padding-bottom: 40px;
+    }
 }
 
 .main__button--container {
-  padding: 20px 20px 20px 0;
-  width: 240px;
+    padding: 20px 20px 20px 0;
+    width: 240px;
 }
 
 .sectiona__preview {
-  padding-bottom: 40px;
-  justify-content: center;
+    padding-bottom: 40px;
+    justify-content: center;
 }
 
 .reset {
-  font-family: $fontTertiary;
-  font-weight: normal;
+    font-family: $fontTertiary;
+    font-weight: normal;
 }
 
 .card {
-  width: 240px;
-  height: 329px;
-  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.35);
-  border-radius: 2px;
+    width: 240px;
+    height: 329px;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2), 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+    border-radius: 2px;
 }
 
 .preview__bio {
-  background-color: $colorWhite;
-
-  padding-top: 21px;
-  padding-bottom: 10px;
-  display: flex;
-  flex-direction: row;
-
-  &--rectangle {
-    height: 42px;
-    width: 5px;
-  }
-
-  &--name {
-    font-family: $fontSecondary;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 0 0 4px 20px;
-    display: inline;
-  }
-
-  &--job {
-    color: $colorTextMenu;
-    font-family: $fontSecondary;
-    font-weight: 400;
-    font-size: 16px;
-    padding: 0 0 0 20px;
-  }
+    background-color: $colorWhite;
+    padding-top: 21px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    &--rectangle {
+        height: 42px;
+        width: 5px;
+        background: $colorPrimary;
+    }
+    &--name {
+        font-family: $fontSecondary;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 0 0 4px 20px;
+        display: inline;
+    }
+    &--job {
+        color: $colorTextMenu;
+        font-family: $fontSecondary;
+        font-weight: 400;
+        font-size: 16px;
+        padding: 0 0 0 20px;
+    }
 }
 
-// //cambiar los colores, color/background
-.js-box__color1 {
-  color: $colorTertiary;
-}
-
-.js-box__color2 {
-  background: $colorPrimary;
-}
-
-.js-box__color3 {
-  border: solid 2px #a2deaf;
-}
-
-//
-.js-box__color4 {
-  color: #420101;
-}
-
-.js-box__color5 {
-  background-color: #bd1010;
-}
-
-.js-box__color6 {
-  //border: solid 2px #bd1010;
-}
-
-.js-box__color7 {
-  color: #3e5b65;
-}
-
-.js-box__color8 {
-  background: #eab052;
-}
-
-.js-box__color9 {
-  border: solid 2px #a0c0cf;
-}
-
-//
 .card__image {
-  width: 240px;
-  height: 200px;
-  background-size: cover;
-  background-position: center;
-  background-image: url($imagePath+"/default.jpg");
+    width: 240px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-image: url($imagePath+"/default.jpg");
 }
 
 .card__social {
-  height: 54px;
-  background: $colorWhite;
-  display: flex;
-
-  &--div {
-    padding-left: 10px;
+    height: 54px;
+    background: $colorWhite;
     display: flex;
-    justify-items: center;
-    align-items: center;
-    text-align: center;
-  }
+    &--div {
+        padding-left: 10px;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 .card__social--button {
-  width: 32px;
-  height: 32px;
-  border-radius: 16px;
-  border: solid 2px #a2deaf;
-  margin-left: 10px;
-  padding: 6px;
-  color: #114e4e;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    border: solid 2px #a2deaf;
+    margin-left: 10px;
+    padding: 6px;
+    color: lightgrey;
+}
+
+.icon-button {
+    background-color: green;
 }
 
 @media all and (min-width: 768px) {
-  .sectiona__main {
-    height: 98vh;
-    border-radius: 6px;
-
-    &--container {
-      /*  margin: 153px auto 260px; */
+    .sectiona__main {
+        height: 98vh;
+        border-radius: 6px;
+        &--container {
+            /*  margin: 153px auto 260px; */
+        }
     }
-  }
 }
