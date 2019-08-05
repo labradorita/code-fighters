@@ -111,6 +111,7 @@ const browse = document.querySelector(".js-form__photo");
 const loadFile = function(event) {
   let preview = document.querySelector(".preview");
   let cardImage = document.querySelector(".js-card__image");
+  debugger;
   preview.src = URL.createObjectURL(event.target.files[0]);
   cardImage.style.backgroundImage = `url(${URL.createObjectURL(event.target.files[0])})`;
 };
