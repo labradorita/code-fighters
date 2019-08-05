@@ -180,7 +180,6 @@ const getFromLocalStorage = () => {
 };
 
 const saveInfo = () => {
-  debugger;
   formInfo.name = nameInput.value;
   formInfo.job = jobInput.value;
   formInfo.photo = photoInput.value;
