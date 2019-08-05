@@ -158,21 +158,41 @@ changeLinkIcon(".js-input-github", ".js-icon-link-github");
 changeLinkIcon(".js-input-linkedin", ".js-icon-link-linkedin");
 
 // LocalStorage
-const formInputs = document.querySelectorAll(".js-input");
+const nameInput = document.querySelector(".js-input-name");
+const jobInput = document.querySelector(".js-input-job");
+const photoInput = document.querySelector(".js-form__photo");
+const emailInput = document.querySelector(".js-input-email");
+const phoneInput = document.querySelector(".js-input-phone");
+const linkedinInput = document.querySelector(".js-input-linkedin");
+const githubInput = document.querySelector(".js-input-github");
 
-function saveInfo() {
-  const formInputs = document.querySelectorAll(".js-input").value;
-  const formInfo = {
-    name: formInputs[0],
-    job: formInputs[1],
-    email: formInputs[2],
-    phone: formInputs[3],
-    linkedin: formInputs[4],
-    github: formInputs[5]
-  };
+const formInfo = {};
+
+const getFromLocalStorage = () => {
+  const userData = JSON.parse(localStorage.getItem("userData"));
+  nameInput.value = userData.name;
+  jobInput.value = userData.job;
+  photoInput.value = userData.photo;
+  emailInput.value = userData.email;
+  phoneInput.value = userData.phone;
+  linkedinInput.value = userData.linkedin;
+  githubInput.value = userData.github;
+};
+
+const saveInfo = () => {
+  debugger;
+  formInfo.name = nameInput.value;
+  formInfo.job = jobInput.value;
+  formInfo.photo = photoInput.value;
+  formInfo.email = emailInput.value;
+  formInfo.phone = phoneInput.value;
+  formInfo.linkedin = linkedinInput.value;
+  formInfo.github = githubInput.value;
   // Pasar objeto a cadena
   localStorage.setItem("userData", JSON.stringify(formInfo));
-}
+};
 
 const form = document.querySelector(".js-form");
 form.addEventListener("keyup", saveInfo);
+
+getFromLocalStorage();
