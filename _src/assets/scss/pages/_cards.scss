@@ -88,11 +88,7 @@
     border: solid 2px #a2deaf;
     margin-left: 10px;
     padding: 6px;
-    color: lightgrey;
-}
-
-.icon-button {
-    background-color: green;
+    color: $colorCardBackDark;
 }
 
 @media all and (min-width: 768px) {

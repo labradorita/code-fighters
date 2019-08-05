@@ -74,8 +74,14 @@ const reset = document.querySelector(".js-sectiona__buton");
 function resetAutopreview() {
   const previewName = document.querySelector(".js-box1_result");
   const previewJob = document.querySelector(".js-preview__job");
+  const iconsUsed = document.querySelectorAll(".js-icon-preview");
+
   previewName.innerHTML = "Nombre Apellido";
   previewJob.innerHTML = "Front-end developer";
+
+  for (const iconUsed of iconsUsed) {
+    iconUsed.style.color = "lightgrey";
+  }
 }
 
 function deleteText() {
@@ -86,6 +92,7 @@ function deleteText() {
   preview.src = " "; //Dejamos en blanco para que no meta imagen
   image.style.backgroundImage = "url(../../assets/images/default.jpg)";
 }
+
 reset.addEventListener("click", deleteText);
 reset.addEventListener("click", resetAutopreview);
 
@@ -170,16 +177,44 @@ function sendRequest(json) {
 //Modificaciones: el Div final comentado de "landing_main" se tiene que descomentar, en el fillin_form el name: comepleteName pasa a ser name: name.
 // icon changes with info
 
-function changeIconColor(classInput, classIcon) {
+function changeIconColor(variableinput, classInput, classIcon) {
   const classIconUsed = document.querySelector(classIcon);
+  const inputText = document.querySelector(variableinput);
+
   const handle = function() {
-    // classIconUsed.style.background = "#dde9ed";
-    classIconUsed.style.color = "#114e4e";
+    if (inputText.value) {
+      classIconUsed.style.color = "#114e4e";
+    } else {
+      classIconUsed.style.color = "lightgrey";
+    }
   };
   document.querySelector(classInput).addEventListener("keyup", handle);
 }
 
-changeIconColor("#phone", ".js-icon-phone");
-changeIconColor("#email", ".js-icon-email");
-changeIconColor("#github", ".js-icon-github");
-changeIconColor("#linkedin", ".js-icon-linkedin");
+changeIconColor(".js-input-phone", "#phone", ".js-icon-phone");
+changeIconColor(".js-input-email", "#email", ".js-icon-email");
+changeIconColor(".js-input-github", "#github", ".js-icon-github");
+changeIconColor(".js-input-linkedin", "#linkedin", ".js-icon-linkedin");
+
+// icon clickables when you write email,github & linkedin
+
+function changeLinkIcon(variableinput, classIcon) {
+  const classIconUsed = document.querySelector(classIcon);
+  const inputText = document.querySelector(variableinput);
+
+  const handle = function() {
+    if (
+      inputText.value.startsWith("http://") ||
+      inputText.value.startsWith("https://")
+    ) {
+      classIconUsed.href = inputText.value;
+    } else {
+      classIconUsed.href = `http://${inputText.value}`;
+    }
+  };
+  document.querySelector(variableinput).addEventListener("keyup", handle);
+}
+
+changeLinkIcon(".js-input-email", ".js-icon-link-email");
+changeLinkIcon(".js-input-github", ".js-icon-link-github");
+changeLinkIcon(".js-input-linkedin", ".js-icon-link-linkedin");
