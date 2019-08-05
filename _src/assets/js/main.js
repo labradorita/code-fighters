@@ -156,3 +156,23 @@ function changeLinkIcon(variableinput, classIcon) {
 changeLinkIcon(".js-input-email", ".js-icon-link-email");
 changeLinkIcon(".js-input-github", ".js-icon-link-github");
 changeLinkIcon(".js-input-linkedin", ".js-icon-link-linkedin");
+
+// LocalStorage
+const formInputs = document.querySelectorAll(".js-input");
+
+function saveInfo() {
+  const formInputs = document.querySelectorAll(".js-input").value;
+  const formInfo = {
+    name: formInputs[0],
+    job: formInputs[1],
+    email: formInputs[2],
+    phone: formInputs[3],
+    linkedin: formInputs[4],
+    github: formInputs[5]
+  };
+  // Pasar objeto a cadena
+  localStorage.setItem("userData", JSON.stringify(formInfo));
+}
+
+const form = document.querySelector(".js-form");
+form.addEventListener("keyup", saveInfo);
