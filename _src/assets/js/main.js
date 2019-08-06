@@ -161,38 +161,71 @@ changeLinkIcon(".js-input-linkedin", ".js-icon-link-linkedin");
 // LocalStorage
 const nameInput = document.querySelector(".js-input-name");
 const jobInput = document.querySelector(".js-input-job");
-const photoInput = document.querySelector(".js-form__photo");
+const photo = document.querySelector(".js-photo");
 const emailInput = document.querySelector(".js-input-email");
 const phoneInput = document.querySelector(".js-input-phone");
 const linkedinInput = document.querySelector(".js-input-linkedin");
 const githubInput = document.querySelector(".js-input-github");
+const paletteInput = document.querySelectorAll(".js-palettes");
+const itemInputs = document.querySelectorAll(".item__input");
+const typograInputs = document.querySelectorAll(".js-typography");
 
+function readChoosenPalette() {
+  const inputChecked = document.querySelector(".js-palettes:checked");
+  return parseInt(inputChecked.value);
+  // for (let i = 0; i < paletteInput.length; i = i + 1) {
+  //   if (paletteInput[i].checked) {
+  //     return parseInt(paletteInput[i].value);
+  //   }
+  // }
+}
+
+function readChoosenTypogra() {
+  const inputChecked = document.querySelector(".js-typography:checked");
+  return parseInt(inputChecked.value);
+}
+
+function previewLocalStorage() {
+  for (let i = 0; i < itemInputs.length; i = i + 1) {
+    itemInputs[i].dispatchEvent(new Event("keyup"));
+  }
+}
+
+//document.querySelector('.js-input-github').dispatchEvent(new Event('keyup'));
+// nameInput.dispatchEvent(new Event("keyup"));
 const formInfo = {};
 
-const getFromLocalStorage = () => {
-  const userData = JSON.parse(localStorage.getItem("userData"));
-  nameInput.value = userData.name;
-  jobInput.value = userData.job;
-  photoInput.value = userData.photo;
-  emailInput.value = userData.email;
-  phoneInput.value = userData.phone;
-  linkedinInput.value = userData.linkedin;
-  githubInput.value = userData.github;
-};
-
 const saveInfo = () => {
+  formInfo.palette = readChoosenPalette();
   formInfo.name = nameInput.value;
   formInfo.job = jobInput.value;
-  formInfo.photo = photoInput.value;
+  formInfo.photo = photo.src;
   formInfo.email = emailInput.value;
   formInfo.phone = phoneInput.value;
   formInfo.linkedin = linkedinInput.value;
   formInfo.github = githubInput.value;
+  formInfo.typogra = readChoosenTypogra();
+
   // Pasar objeto a cadena
   localStorage.setItem("userData", JSON.stringify(formInfo));
 };
 
+const getFromLocalStorage = () => {
+  const userData = JSON.parse(localStorage.getItem("userData"));
+  paletteInput.value = userData.pallette;
+  nameInput.value = userData.name;
+  jobInput.value = userData.job;
+  photo.src = userData.photo;
+  emailInput.value = userData.email;
+  phoneInput.value = userData.phone;
+  linkedinInput.value = userData.linkedin;
+  githubInput.value = userData.github;
+  typograInputs.value = userData.typogra;
+};
+
 const form = document.querySelector(".js-form");
 form.addEventListener("keyup", saveInfo);
+form.addEventListener("click", saveInfo);
 
 getFromLocalStorage();
+previewLocalStorage();
