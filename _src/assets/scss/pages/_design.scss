@@ -115,12 +115,33 @@
     font-size: $sizeText;
   }
   .box_typo_prim {
-    font-family: $fontOptionalPrimary;
+    font-family: $fontSecondary;
   }
   .box_typo_sec {
-    font-family: $fontOptionalSecondary;
+    font-family: $fontOptionalPrimary;
   }
   .box_typo_ter {
-    font-family: $fontOptionalTertiary;
+    font-family: $fontOptionalSecondary;
+  }
+}
+
+.typography1 {
+  .preview__bio--name,
+  .preview__bio--job {
+    font-family: $fontSecondary;
+  }
+}
+
+.typography2 {
+  .preview__bio--name,
+  .preview__bio--job {
+    font-family: $fontOptionalPrimary;
+  }
+}
+
+.typography3 {
+  .preview__bio--name,
+  .preview__bio--job {
+    font-family: $fontOptionalSecondary;
   }
 }

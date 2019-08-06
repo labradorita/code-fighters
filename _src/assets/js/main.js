@@ -111,13 +111,79 @@ const browse = document.querySelector(".js-form__photo");
 const loadFile = function(event) {
   let preview = document.querySelector(".preview");
   let cardImage = document.querySelector(".js-card__image");
-  debugger;
   preview.src = URL.createObjectURL(event.target.files[0]);
   cardImage.style.backgroundImage = `url(${URL.createObjectURL(event.target.files[0])})`;
 };
 browse.addEventListener("change", loadFile);
 
-// icon changes with info & reset in case there aren't inputs
+// CREAR ENLACE DE CARD
+const form = document.querySelector("form");
+// Creo un objeto File Reader
+const fr = new FileReader();
+const button = document.querySelector(".share__btn");
+// Agarro el espacio donde se va a pintar la URL con la tarjeta generada
+const urlCard = document.querySelector(".created_card_small");
+
+//Función que coge la foto y la transforma en formato correcto para el JSON
+function loadPhoto(ev) {
+  ev.preventDefault();
+  let myPhoto = document.querySelector(".js-form__photo").files[0];
+  fr.addEventListener("load", sendData);
+  fr.readAsDataURL(myPhoto);
+}
+
+button.addEventListener("click", loadPhoto);
+//Función que es llamada después del loadPhoto y envía los valores JSON a la función que llama a la API.
+function sendData() {
+  let inputs = Array.from(form.elements);
+  let json = getJSONFromInputs(inputs);
+  json.photo = fr.result;
+  sendRequest(json);
+}
+
+// Función que transforma los valores del formulario en JSON excepto los botones.
+function getJSONFromInputs(inputs) {
+  return inputs.reduce(function(acc, val) {
+    if (val.nodeName !== "BUTTON") acc[val.name] = val.value;
+    return acc;
+  }, {});
+}
+
+function showURL(data) {
+  if (data.success) {
+    // Show URL card
+    urlCard.innerHTML = '<h3 class="created_card_h3">La tarjeta ha sido creada:</h3> <a href=' + data.cardURL + ">" + data.cardURL + "</a>";
+
+    // Update twitter button URL
+    const twitterButton = document.querySelector(".js-button-twitter");
+    twitterButton.href = `https://twitter.com/intent/tweet?text=Mira mi tarjeta de visita ${data.cardURL}`;
+  } else {
+    urlCard.innerHTML = "ERROR:" + data.error;
+  }
+}
+
+// Función que llama a la API y le pasa en el BODY el JSON previamente transformado con los valores del formulario.
+function sendRequest(json) {
+  fetch("https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/", {
+    method: "POST",
+    body: JSON.stringify(json),
+    headers: {
+      "content-type": "application/json"
+    }
+  })
+    .then(function(resp) {
+      return resp.json();
+    })
+    .then(function(result) {
+      showURL(result);
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
+}
+
+//Modificaciones: el Div final comentado de "landing_main" se tiene que descomentar, en el fillin_form el name: comepleteName pasa a ser name: name.
+// icon changes with info
 
 function changeIconColor(variableinput, classInput, classIcon) {
   const classIconUsed = document.querySelector(classIcon);
@@ -192,7 +258,18 @@ const saveInfo = () => {
   localStorage.setItem("userData", JSON.stringify(formInfo));
 };
 
-const form = document.querySelector(".js-form");
-form.addEventListener("keyup", saveInfo);
+//// changing color of button-share when form is completed
 
-getFromLocalStorage();
+const buttonShare = document.querySelector(".share__btn");
+
+function changeButtonColor() {
+  if (nameInput.value && jobInput.value && emailInput.value && linkedinInput.value && githubInput.value && photoInput.value) {
+    buttonShare.style.background = "#e17334";
+  } else {
+    buttonShare.style.background = "lightgrey";
+  }
+}
+
+form.addEventListener("change", changeButtonColor);
+
+// duda. se genera el link incluso sin los campos obligatorios?
