@@ -23,7 +23,7 @@ function autoPreview(variableinput, variableoutput, defaultValue) {
 
 // change palettes function
 
-const previewCard = document.querySelector(".js-card");
+const previewCard = document.querySelector(".js-palettecontainer");
 
 function createPaletteSelectorFunction(classPalette) {
     return function() {
@@ -41,7 +41,7 @@ const ratio3 = document.querySelector("#option3").addEventListener("change", sel
 
 // change typography function
 
-const previewCardTypo = document.querySelector(".js-card");
+const previewCardTypo = document.querySelector(".js-typocontainer");
 
 function createTypographySelectorFunction(classTypography) {
     return function() {
@@ -132,6 +132,12 @@ function loadPhoto(ev) {
     fr.readAsDataURL(myPhoto);
 }
 
+function loadPalette(ev) {
+    ev.preventDefault();
+
+    fr.readAsDataURL(createPaletteSelectorFunction);
+}
+
 button.addEventListener("click", loadPhoto);
 //Función que es llamada después del loadPhoto y envía los valores JSON a la función que llama a la API.
 function sendData() {
@@ -140,11 +146,17 @@ function sendData() {
     json.photo = fr.result;
     sendRequest(json);
 }
-
 // Función que transforma los valores del formulario en JSON excepto los botones.
 function getJSONFromInputs(inputs) {
-    return inputs.reduce(function(acc, val) {
-        if (val.nodeName !== "BUTTON") acc[val.name] = val.value;
+    debugger;
+    return inputs.reduce(function(acc, input) {
+        if (input.getAttribute("type") === "radio") {
+            if (input.checked === true) {
+                acc[input.name] = input.value;
+            }
+        } else if (input.nodeName !== "BUTTON") {
+            acc[input.name] = input.value;
+        }
         return acc;
     }, {});
 }
@@ -272,5 +284,3 @@ function changeButtonColor() {
 }
 
 form.addEventListener("change", changeButtonColor);
-
-// duda. se genera el link incluso sin los campos obligatorios?
