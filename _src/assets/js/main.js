@@ -151,7 +151,12 @@ function getJSONFromInputs(inputs) {
 
 function showURL(data) {
     if (data.success) {
+        // Show URL card
         urlCard.innerHTML = '<h3 class="created_card_h3">La tarjeta ha sido creada:</h3> <a href=' + data.cardURL + ">" + data.cardURL + "</a>";
+
+        // Update twitter button URL
+        const twitterButton = document.querySelector(".js-button-twitter");
+        twitterButton.href = `https://twitter.com/intent/tweet?text=Mira mi tarjeta de visita ${data.cardURL}`;
     } else {
         urlCard.innerHTML = "ERROR:" + data.error;
     }
@@ -267,3 +272,5 @@ function changeButtonColor() {
 }
 
 form.addEventListener("change", changeButtonColor);
+
+// duda. se genera el link incluso sin los campos obligatorios?
