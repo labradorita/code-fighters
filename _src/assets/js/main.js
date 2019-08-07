@@ -119,7 +119,6 @@ const loadFileToImages = function() {
   preview.src = fr.result;
   let cardImage = document.querySelector(".js-card__image");
   cardImage.style.backgroundImage = `url(${fr.result})`;
-  //ToDo: volver a guardar en local storage
   saveInfo();
 };
 
