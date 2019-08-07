@@ -1,5 +1,6 @@
 .share {
   width: 100%;
+
   &__button {
     align-items: center;
     margin: 20px;
@@ -17,20 +18,25 @@
   border-top: solid $colorLineBorder 2px;
   border-bottom: solid $colorLineBorder 2px;
   font-family: $fontTertiary;
+
   &_h3 {
     padding-top: 20px;
     padding-bottom: 5px;
     color: $colorTextLight;
   }
+
   &_small {
     color: $colorSecondary;
+    text-decoration: none;
   }
+
   &_button {
     margin: 20px;
     padding: 10px;
     background: $twitterButton;
     color: $colorWhite;
     border: none;
+    text-decoration: none;
     border-radius: 3px;
   }
 }

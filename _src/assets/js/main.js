@@ -23,7 +23,7 @@ function autoPreview(variableinput, variableoutput, defaultValue) {
 
 // change palettes function
 
-const previewCard = document.querySelector(".js-card");
+const previewCard = document.querySelector(".js-palettecontainer");
 
 function createPaletteSelectorFunction(classPalette) {
   return function() {
@@ -41,7 +41,7 @@ const ratio3 = document.querySelector("#option3").addEventListener("change", sel
 
 // change typography function
 
-const previewCardTypo = document.querySelector(".js-card");
+const previewCardTypo = document.querySelector(".js-typocontainer");
 
 function createTypographySelectorFunction(classTypography) {
   return function() {
@@ -139,6 +139,18 @@ function loadPhoto(ev) {
   fr.readAsDataURL(myPhoto);
 }
 
+// function loadPalette(ev) {
+//   ev.preventDefault();
+
+//   fr.readAsDataURL(createPaletteSelectorFunction);
+// }
+
+// function loadPalette(ev) {
+//   ev.preventDefault();
+
+//   fr.readAsDataURL(createPaletteSelectorFunction);
+// }
+
 button.addEventListener("click", loadPhoto);
 //Función que es llamada después del loadPhoto y envía los valores JSON a la función que llama a la API.
 function sendData() {
@@ -147,11 +159,16 @@ function sendData() {
   json.photo = fr.result;
   sendRequest(json);
 }
-
 // Función que transforma los valores del formulario en JSON excepto los botones.
 function getJSONFromInputs(inputs) {
-  return inputs.reduce(function(acc, val) {
-    if (val.nodeName !== "BUTTON") acc[val.name] = val.value;
+  return inputs.reduce(function(acc, input) {
+    if (input.getAttribute("type") === "radio") {
+      if (input.checked === true) {
+        acc[input.name] = input.value;
+      }
+    } else if (input.nodeName !== "BUTTON") {
+      acc[input.name] = input.value;
+    }
     return acc;
   }, {});
 }
@@ -159,7 +176,7 @@ function getJSONFromInputs(inputs) {
 function showURL(data) {
   if (data.success) {
     // Show URL card
-    urlCard.innerHTML = '<h3 class="created_card_h3">La tarjeta ha sido creada:</h3> <a href=' + data.cardURL + ">" + data.cardURL + "</a>";
+    urlCard.innerHTML = '<h3 class="created_card_h3">La tarjeta ha sido creada:</h3> <a class="created_card_small" href=' + data.cardURL + ">" + data.cardURL + "</a>";
 
     // Update twitter button URL
     const twitterButton = document.querySelector(".js-button-twitter");
@@ -282,34 +299,28 @@ const saveInfo = () => {
 
   // Pasar objeto a cadena
   localStorage.setItem("userData", JSON.stringify(formInfo));
+  changeButtonColor();
 };
 
 const getFromLocalStorage = () => {
   const userData = JSON.parse(localStorage.getItem("userData"));
-  paletteInput.value = userData.palette;
-  nameInput.value = userData.name;
-  jobInput.value = userData.job;
-  photo.src = userData.photo;
-  photoCard.style.backgroundImage = `url(${userData.photo})`;
-  emailInput.value = userData.email;
-  phoneInput.value = userData.phone;
-  linkedinInput.value = userData.linkedin;
-  githubInput.value = userData.github;
-  typograInputs.value = userData.typogra;
-};
-
-const startApp = () => {
-  if (formInfo !== {}) {
-    getFromLocalStorage();
-    previewLocalStorage();
+  if (userData !== null) {
+    paletteInput.value = userData.palette;
+    nameInput.value = userData.name;
+    jobInput.value = userData.job;
+    photo.src = userData.photo;
+    photoCard.style.backgroundImage = `url(${userData.photo})`;
+    emailInput.value = userData.email;
+    phoneInput.value = userData.phone;
+    linkedinInput.value = userData.linkedin;
+    githubInput.value = userData.github;
+    typograInputs.value = userData.typogra;
   }
 };
 
 // const form = document.querySelector(".js-form");
 form.addEventListener("keyup", saveInfo);
 form.addEventListener("click", saveInfo);
-
-startApp();
 
 //// changing color of button-share when form is completed
 
@@ -324,6 +335,14 @@ function changeButtonColor() {
   }
 }
 
-form.addEventListener("change", changeButtonColor);
+form.addEventListener("keyup", changeButtonColor);
 
-// duda. se genera el link incluso sin los campos obligatorios?
+const startApp = () => {
+  if (!!formInfo === true) {
+    getFromLocalStorage();
+    previewLocalStorage();
+    changeButtonColor();
+  }
+};
+
+startApp();
