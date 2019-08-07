@@ -141,6 +141,7 @@ function loadPalette(ev) {
 button.addEventListener("click", loadPhoto);
 //Función que es llamada después del loadPhoto y envía los valores JSON a la función que llama a la API.
 function sendData() {
+    debugger
     let inputs = Array.from(form.elements);
     let json = getJSONFromInputs(inputs);
     json.photo = fr.result;
