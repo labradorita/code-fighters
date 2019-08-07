@@ -120,7 +120,7 @@ const loadFileToImages = function() {
   let cardImage = document.querySelector(".js-card__image");
   cardImage.style.backgroundImage = `url(${fr.result})`;
   //ToDo: volver a guardar en local storage
-  //saveInfo();
+  saveInfo();
 };
 
 // CREAR ENLACE DE CARD
@@ -298,19 +298,26 @@ const getFromLocalStorage = () => {
   typograInputs.value = userData.typogra;
 };
 
+const startApp = () => {
+  if (formInfo !== {}) {
+    getFromLocalStorage();
+    previewLocalStorage();
+  }
+};
+
 // const form = document.querySelector(".js-form");
 form.addEventListener("keyup", saveInfo);
 form.addEventListener("click", saveInfo);
 
-getFromLocalStorage();
-previewLocalStorage();
+startApp();
+
 //// changing color of button-share when form is completed
 
 const buttonShare = document.querySelector(".share__btn");
 
 function changeButtonColor() {
-  // if (nameInput.value && jobInput.value && emailInput.value && linkedinInput.value && githubInput.value && photo.value) {
-  if (nameInput.value && jobInput.value && emailInput.value && linkedinInput.value && githubInput.value && browse.value) {
+  if (nameInput.value && jobInput.value && emailInput.value && linkedinInput.value && githubInput.value && photo.src) {
+    //if (nameInput.value && jobInput.value && emailInput.value && linkedinInput.value && githubInput.value && browse.value) {
     buttonShare.style.background = "#e17334";
   } else {
     buttonShare.style.background = "lightgrey";
