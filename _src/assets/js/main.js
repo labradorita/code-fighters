@@ -141,7 +141,7 @@ function loadPalette(ev) {
 button.addEventListener("click", loadPhoto);
 //Función que es llamada después del loadPhoto y envía los valores JSON a la función que llama a la API.
 function sendData() {
-    debugger
+    debugger;
     let inputs = Array.from(form.elements);
     let json = getJSONFromInputs(inputs);
     json.photo = fr.result;
@@ -149,15 +149,8 @@ function sendData() {
 }
 // Función que transforma los valores del formulario en JSON excepto los botones.
 function getJSONFromInputs(inputs) {
-    debugger;
-    return inputs.reduce(function(acc, input) {
-        if (input.getAttribute("type") === "radio") {
-            if (input.checked === true) {
-                acc[input.name] = input.value;
-            }
-        } else if (input.nodeName !== "BUTTON") {
-            acc[input.name] = input.value;
-        }
+    return inputs.reduce(function(acc, val) {
+        if (val.nodeName !== "BUTTON") acc[val.name] = val.value;
         return acc;
     }, {});
 }
@@ -165,7 +158,7 @@ function getJSONFromInputs(inputs) {
 function showURL(data) {
     if (data.success) {
         // Show URL card
-        urlCard.innerHTML = '<h3 class="created_card_h3">La tarjeta ha sido creada:</h3> <a href=' + data.cardURL + ">" + data.cardURL + "</a>";
+        urlCard.innerHTML = '<h3 class="created_card_h3">La tarjeta ha sido creada:</h3> <a class="created_card_small" href=' + data.cardURL + ">" + data.cardURL + "</a>";
 
         // Update twitter button URL
         const twitterButton = document.querySelector(".js-button-twitter");
