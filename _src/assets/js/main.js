@@ -138,6 +138,12 @@ function loadPalette(ev) {
     fr.readAsDataURL(createPaletteSelectorFunction);
 }
 
+function loadPalette(ev) {
+    ev.preventDefault();
+
+    fr.readAsDataURL(createPaletteSelectorFunction);
+}
+
 button.addEventListener("click", loadPhoto);
 //Función que es llamada después del loadPhoto y envía los valores JSON a la función que llama a la API.
 function sendData() {
@@ -149,8 +155,15 @@ function sendData() {
 }
 // Función que transforma los valores del formulario en JSON excepto los botones.
 function getJSONFromInputs(inputs) {
-    return inputs.reduce(function(acc, val) {
-        if (val.nodeName !== "BUTTON") acc[val.name] = val.value;
+    debugger;
+    return inputs.reduce(function(acc, input) {
+        if (input.getAttribute("type") === "radio") {
+            if (input.checked === true) {
+                acc[input.name] = input.value;
+            }
+        } else if (input.nodeName !== "BUTTON") {
+            acc[input.name] = input.value;
+        }
         return acc;
     }, {});
 }
