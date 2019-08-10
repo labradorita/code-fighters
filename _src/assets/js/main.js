@@ -27,7 +27,7 @@ const previewCard = document.querySelector(".js-palettecontainer");
 
 function createPaletteSelectorFunction(classPalette) {
     return function() {
-        previewCard.className = `js-card ${classPalette}`;
+        previewCard.className = `js-palettecontainer ${classPalette}`;
     };
 }
 
@@ -153,12 +153,6 @@ function loadPalette(ev) {
     fr.readAsDataURL(createPaletteSelectorFunction);
 }
 
-function loadPalette(ev) {
-    ev.preventDefault();
-
-    fr.readAsDataURL(createPaletteSelectorFunction);
-}
-
 button.addEventListener("click", loadPhoto);
 //Función que es llamada después del loadPhoto y envía los valores JSON a la función que llama a la API.
 function sendData() {
@@ -273,7 +267,6 @@ const photoCard = document.querySelector(".js-card__image");
 function readChoosenPalette() {
     const inputChecked = document.querySelector(".js-palettes:checked");
     return parseInt(inputChecked.value);
-
 }
 
 function readChoosenTypogra() {
