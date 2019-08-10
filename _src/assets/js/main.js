@@ -3,7 +3,7 @@
 // autopreview function
 
 autoPreview(".js-input-name", ".preview__bio--name", "Nombre Apellido");
-autoPreview(".js-input-job", ".preview__bio--job", "Trabajo");
+autoPreview(".js-input-job", ".preview__bio--job", "Front-end developer");
 
 function autoPreview(variableinput, variableoutput, defaultValue) {
     const outputText = document.querySelector(variableoutput);
@@ -15,7 +15,7 @@ function autoPreview(variableinput, variableoutput, defaultValue) {
             outputText.innerHTML = inputValue.value;
         } else {
             outputText.innerHTML = defaultValue;
-            console.log(defaultValue);
+            //console.log(defaultValue);
         }
     }
     inputText.addEventListener("keyup", changePara);
@@ -109,12 +109,19 @@ reset.addEventListener("click", resetAutopreview);
 // imagen preview
 const browse = document.querySelector(".js-form__photo");
 const loadFile = function(event) {
-    let preview = document.querySelector(".preview");
-    let cardImage = document.querySelector(".js-card__image");
-    preview.src = URL.createObjectURL(event.target.files[0]);
-    cardImage.style.backgroundImage = `url(${URL.createObjectURL(event.target.files[0])})`;
+    fr.addEventListener("load", loadFileToImages);
+    fr.readAsDataURL(event.target.files[0]);
 };
 browse.addEventListener("change", loadFile);
+
+const loadFileToImages = function() {
+    let preview = document.querySelector(".preview");
+    preview.src = fr.result;
+    let cardImage = document.querySelector(".js-card__image");
+    cardImage.style.backgroundImage = `url(${fr.result})`;
+    //ToDo: volver a guardar en local storage
+    //saveInfo();
+};
 
 // CREAR ENLACE DE CARD
 const form = document.querySelector("form");
@@ -147,7 +154,6 @@ function loadPalette(ev) {
 button.addEventListener("click", loadPhoto);
 //Función que es llamada después del loadPhoto y envía los valores JSON a la función que llama a la API.
 function sendData() {
-    debugger;
     let inputs = Array.from(form.elements);
     let json = getJSONFromInputs(inputs);
     json.photo = fr.result;
@@ -246,44 +252,105 @@ changeLinkIcon(".js-input-linkedin", ".js-icon-link-linkedin");
 // LocalStorage
 const nameInput = document.querySelector(".js-input-name");
 const jobInput = document.querySelector(".js-input-job");
-const photoInput = document.querySelector(".js-form__photo");
+const photo = document.querySelector(".js-photo");
 const emailInput = document.querySelector(".js-input-email");
 const phoneInput = document.querySelector(".js-input-phone");
 const linkedinInput = document.querySelector(".js-input-linkedin");
 const githubInput = document.querySelector(".js-input-github");
+const paletteInput = document.querySelectorAll(".js-palettes");
+const itemInputs = document.querySelectorAll(".item__input");
+const typograInputs = document.querySelectorAll(".js-typography");
+const photoCard = document.querySelector(".js-card__image");
 
+function readChoosenPalette() {
+    const inputChecked = document.querySelector(".js-palettes:checked");
+    return parseInt(inputChecked.value);
+    // for (let i = 0; i < paletteInput.length; i = i + 1) {
+    //   if (paletteInput[i].checked) {
+    //     return parseInt(paletteInput[i].value);
+    //   }
+    // }
+}
+
+function readChoosenTypogra() {
+    const inputChecked = document.querySelector(".js-typography:checked");
+    return parseInt(inputChecked.value);
+}
+
+function previewLocalStorage() {
+    for (let i = 0; i < itemInputs.length; i = i + 1) {
+        itemInputs[i].dispatchEvent(new Event("keyup"));
+    }
+}
+
+//document.querySelector('.js-input-github').dispatchEvent(new Event('keyup'));
+// nameInput.dispatchEvent(new Event("keyup"));
 const formInfo = {};
 
-const getFromLocalStorage = () => {
-    const userData = JSON.parse(localStorage.getItem("userData"));
-    nameInput.value = userData.name;
-    jobInput.value = userData.job;
-    photoInput.value = userData.photo;
-    emailInput.value = userData.email;
-    phoneInput.value = userData.phone;
-    linkedinInput.value = userData.linkedin;
-    githubInput.value = userData.github;
-};
-
 const saveInfo = () => {
-    debugger;
+    formInfo.palette = readChoosenPalette();
     formInfo.name = nameInput.value;
     formInfo.job = jobInput.value;
-    formInfo.photo = photoInput.value;
+    formInfo.photo = photo.src;
     formInfo.email = emailInput.value;
     formInfo.phone = phoneInput.value;
     formInfo.linkedin = linkedinInput.value;
     formInfo.github = githubInput.value;
+    formInfo.typogra = readChoosenTypogra();
+
     // Pasar objeto a cadena
     localStorage.setItem("userData", JSON.stringify(formInfo));
 };
 
+
+
+const getFromLocalStorage = () => {
+    const userData = JSON.parse(localStorage.getItem("userData"));
+    paletteInput.value = userData.palette;
+    nameInput.value = userData.name;
+    jobInput.value = userData.job;
+    photo.src = userData.photo;
+    if (photo === true) {
+        photoCard.style.backgroundImage = `url(${userData.photo})`;
+    } else {
+        photoCard.style.backgroundImage = `url("../../assets/images/default.jpg")`;
+    }
+    emailInput.value = userData.email;
+    phoneInput.value = userData.phone;
+    linkedinInput.value = userData.linkedin;
+    githubInput.value = userData.github;
+    typograInputs.value = userData.typogra;
+};
+
+// const getFromLocalStorage = () => {
+//     const userData = JSON.parse(localStorage.getItem("userData"));
+//     paletteInput.value = userData.palette;
+//     nameInput.value = userData.name;
+//     jobInput.value = userData.job;
+//     photo.src = userData.photo;
+
+//     photoCard.style.backgroundImage = `url(${userData.photo})`;
+
+//     emailInput.value = userData.email;
+//     phoneInput.value = userData.phone;
+//     linkedinInput.value = userData.linkedin;
+//     githubInput.value = userData.github;
+//     typograInputs.value = userData.typogra;
+// };
+
+// const form = document.querySelector(".js-form");
+form.addEventListener("keyup", saveInfo);
+form.addEventListener("click", saveInfo);
+
+getFromLocalStorage();
+previewLocalStorage();
 //// changing color of button-share when form is completed
 
 const buttonShare = document.querySelector(".share__btn");
 
 function changeButtonColor() {
-    if (nameInput.value && jobInput.value && emailInput.value && linkedinInput.value && githubInput.value && photoInput.value) {
+    // if (nameInput.value && jobInput.value && emailInput.value && linkedinInput.value && githubInput.value && photo.value) {
+    if (nameInput.value && jobInput.value && emailInput.value && linkedinInput.value && githubInput.value && browse.value) {
         buttonShare.style.background = "#e17334";
     } else {
         buttonShare.style.background = "lightgrey";
