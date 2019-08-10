@@ -273,11 +273,7 @@ const photoCard = document.querySelector(".js-card__image");
 function readChoosenPalette() {
     const inputChecked = document.querySelector(".js-palettes:checked");
     return parseInt(inputChecked.value);
-    // for (let i = 0; i < paletteInput.length; i = i + 1) {
-    //   if (paletteInput[i].checked) {
-    //     return parseInt(paletteInput[i].value);
-    //   }
-    // }
+
 }
 
 function readChoosenTypogra() {
@@ -309,8 +305,6 @@ const saveInfo = () => {
     // Pasar objeto a cadena
     localStorage.setItem("userData", JSON.stringify(formInfo));
 };
-
-
 
 const getFromLocalStorage = () => {
     const userData = JSON.parse(localStorage.getItem("userData"));
