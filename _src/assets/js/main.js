@@ -304,12 +304,12 @@ const getFromLocalStorage = () => {
     paletteInput.value = userData.palette;
     nameInput.value = userData.name;
     jobInput.value = userData.job;
-    // if (photo === true) {
-    photoCard.style.backgroundImage = `url(${userData.photo})`;
-    // } else {
-    photo.src = userData.photo;
-    // photoCard.style.backgroundImage = `url("../../assets/images/default.jpg")`;
-    // }
+    if (photo === true) {
+        photoCard.style.backgroundImage = `url(${userData.photo})`;
+    } else {
+        photo.src = userData.photo;
+        photoCard.style.backgroundImage = `url("../../assets/images/default.jpg")`;
+    }
     emailInput.value = userData.email;
     phoneInput.value = userData.phone;
     linkedinInput.value = userData.linkedin;
