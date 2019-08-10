@@ -109,9 +109,17 @@ reset.addEventListener("click", resetAutopreview);
 // imagen preview
 const browse = document.querySelector(".js-form__photo");
 const loadFile = function(event) {
-    fr.addEventListener("load", loadFileToImages);
-    fr.readAsDataURL(event.target.files[0]);
+    let preview = document.querySelector(".preview");
+    let cardImage = document.querySelector(".js-card__image");
+    preview.src = URL.createObjectURL(event.target.files[0]);
+    cardImage.style.backgroundImage = `url(${URL.createObjectURL(event.target.files[0])})`;
 };
+// const browse = document.querySelector(".js-form__photo");
+// const loadFile = function(event) {
+//     fr.addEventListener("load", loadFileToImages);
+//     fr.readAsDataURL(event.target.files[0]);
+// };
+
 browse.addEventListener("change", loadFile);
 
 const loadFileToImages = function() {
@@ -322,22 +330,6 @@ const getFromLocalStorage = () => {
     typograInputs.value = userData.typogra;
 };
 
-// const getFromLocalStorage = () => {
-//     const userData = JSON.parse(localStorage.getItem("userData"));
-//     paletteInput.value = userData.palette;
-//     nameInput.value = userData.name;
-//     jobInput.value = userData.job;
-//     photo.src = userData.photo;
-
-//     photoCard.style.backgroundImage = `url(${userData.photo})`;
-
-//     emailInput.value = userData.email;
-//     phoneInput.value = userData.phone;
-//     linkedinInput.value = userData.linkedin;
-//     githubInput.value = userData.github;
-//     typograInputs.value = userData.typogra;
-// };
-
 // const form = document.querySelector(".js-form");
 form.addEventListener("keyup", saveInfo);
 form.addEventListener("click", saveInfo);
@@ -349,12 +341,10 @@ previewLocalStorage();
 const buttonShare = document.querySelector(".share__btn");
 
 function changeButtonColor() {
-    // if (nameInput.value && jobInput.value && emailInput.value && linkedinInput.value && githubInput.value && photo.value) {
     if (nameInput.value && jobInput.value && emailInput.value && linkedinInput.value && githubInput.value && browse.value) {
         buttonShare.style.background = "#e17334";
     } else {
         buttonShare.style.background = "lightgrey";
     }
 }
-
 form.addEventListener("change", changeButtonColor);
