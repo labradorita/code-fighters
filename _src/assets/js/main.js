@@ -344,7 +344,7 @@ previewLocalStorage();
 const buttonShare = document.querySelector(".share__btn");
 
 function changeButtonColor() {
-    if (nameInput.value && jobInput.value && emailInput.value && linkedinInput.value && githubInput.value && browse.value) {
+    if (nameInput.value && jobInput.value && emailInput.value && linkedinInput.value && githubInput.value) {
         buttonShare.style.background = "#e17334";
     } else {
         buttonShare.style.background = "lightgrey";
