@@ -231,7 +231,7 @@ changeIconColor(".js-input-email", "#email", ".js-icon-email");
 changeIconColor(".js-input-github", "#github", ".js-icon-github");
 changeIconColor(".js-input-linkedin", "#linkedin", ".js-icon-linkedin");
 
-// icon clickables when you write email,github & linkedin
+// icon clickables when you write github & linkedin
 
 function changeLinkIcon(variableinput, classIcon) {
     const classIconUsed = document.querySelector(classIcon);
@@ -247,9 +247,25 @@ function changeLinkIcon(variableinput, classIcon) {
     document.querySelector(variableinput).addEventListener("keyup", handle);
 }
 
-changeLinkIcon(".js-input-email", ".js-icon-link-email");
 changeLinkIcon(".js-input-github", ".js-icon-link-github");
 changeLinkIcon(".js-input-linkedin", ".js-icon-link-linkedin");
+
+// icon clickables when you write email
+function changeLinkIconMail(variableinput, classIcon) {
+    const classIconUsed = document.querySelector(classIcon);
+    const inputText = document.querySelector(variableinput);
+
+    const handle = function() {
+        if (inputText.value.startsWith("http://") || inputText.value.startsWith("https://")) {
+            classIconUsed.href = `mailto:${inputText.value}`;
+        } else {
+            classIconUsed.href = `http://mailto:${inputText.value}`;
+        }
+    };
+    document.querySelector(variableinput).addEventListener("keyup", handle);
+}
+
+changeLinkIconMail(".js-input-email", ".js-icon-link-email");
 
 // LocalStorage
 const nameInput = document.querySelector(".js-input-name");
