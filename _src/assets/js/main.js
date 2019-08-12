@@ -88,6 +88,7 @@ function resetAutopreview() {
 
   previewName.innerHTML = "Nombre Apellido";
   previewJob.innerHTML = "Front-end developer";
+  localStorage.removeItem("userData");
 
   for (const iconUsed of iconsUsed) {
     iconUsed.style.color = "lightgrey";
@@ -301,20 +302,37 @@ const saveInfo = () => {
   changeButtonColor();
 };
 
+// const getFromLocalStorage = () => {
+//   const userData = JSON.parse(localStorage.getItem("userData"));
+//   if (userData !== null) {
+//     paletteInput.value = userData.palette;
+//     nameInput.value = userData.name;
+//     jobInput.value = userData.job;
+//     photo.src = userData.photo;
+//     photoCard.style.backgroundImage = `url(${userData.photo})`;
+//     emailInput.value = userData.email;
+//     phoneInput.value = userData.phone;
+//     linkedinInput.value = userData.linkedin;
+//     githubInput.value = userData.github;
+//     typograInputs.value = userData.typogra;
+//   }
+// };
 const getFromLocalStorage = () => {
   const userData = JSON.parse(localStorage.getItem("userData"));
-  if (userData !== null) {
-    paletteInput.value = userData.palette;
-    nameInput.value = userData.name;
-    jobInput.value = userData.job;
-    photo.src = userData.photo;
+  paletteInput.value = userData.palette;
+  nameInput.value = userData.name;
+  jobInput.value = userData.job;
+  if (!!userData.photo === true) {
     photoCard.style.backgroundImage = `url(${userData.photo})`;
-    emailInput.value = userData.email;
-    phoneInput.value = userData.phone;
-    linkedinInput.value = userData.linkedin;
-    githubInput.value = userData.github;
-    typograInputs.value = userData.typogra;
+  } else {
+    // photo.src = userData.photo;
+    photoCard.style.backgroundImage = `url("../../assets/images/default.jpg")`;
   }
+  emailInput.value = userData.email;
+  phoneInput.value = userData.phone;
+  linkedinInput.value = userData.linkedin;
+  githubInput.value = userData.github;
+  typograInputs.value = userData.typogra;
 };
 
 // const form = document.querySelector(".js-form");
