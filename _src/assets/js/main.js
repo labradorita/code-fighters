@@ -88,11 +88,11 @@ function resetAutopreview() {
 
   previewName.innerHTML = "Nombre Apellido";
   previewJob.innerHTML = "Front-end developer";
-  localStorage.removeItem("userData");
 
   for (const iconUsed of iconsUsed) {
     iconUsed.style.color = "lightgrey";
   }
+  localStorage.removeItem("userData");
 }
 
 function deleteText() {
@@ -176,7 +176,7 @@ function getJSONFromInputs(inputs) {
 function showURL(data) {
   if (data.success) {
     // Show URL card
-    urlCard.innerHTML = '<h3 class="created_card_h3">La tarjeta ha sido creada:</h3> <a class="created_card_small" href=' + data.cardURL + ">" + data.cardURL + "</a>";
+    urlCard.innerHTML = '<h3 class="created_card_h3">La tarjeta ha sido creada:</h3> <a class="created_card_small" target="_blank" href=' + data.cardURL + ">" + data.cardURL + "</a>";
 
     // Update twitter button URL
     const twitterButton = document.querySelector(".js-button-twitter");
@@ -302,37 +302,24 @@ const saveInfo = () => {
   changeButtonColor();
 };
 
-// const getFromLocalStorage = () => {
-//   const userData = JSON.parse(localStorage.getItem("userData"));
-//   if (userData !== null) {
-//     paletteInput.value = userData.palette;
-//     nameInput.value = userData.name;
-//     jobInput.value = userData.job;
-//     photo.src = userData.photo;
-//     photoCard.style.backgroundImage = `url(${userData.photo})`;
-//     emailInput.value = userData.email;
-//     phoneInput.value = userData.phone;
-//     linkedinInput.value = userData.linkedin;
-//     githubInput.value = userData.github;
-//     typograInputs.value = userData.typogra;
-//   }
-// };
 const getFromLocalStorage = () => {
   const userData = JSON.parse(localStorage.getItem("userData"));
-  paletteInput.value = userData.palette;
-  nameInput.value = userData.name;
-  jobInput.value = userData.job;
-  if (!!userData.photo === true) {
+  if (userData !== null) {
+    paletteInput.value = userData.palette;
+    nameInput.value = userData.name;
+    jobInput.value = userData.job;
+    if (!!userData.photo === true) {
+      photoCard.style.backgroundImage = `url(${userData.photo})`;
+    } else {
+      photoCard.style.backgroundImage = `url("../../assets/images/default.jpg")`;
+    }
     photoCard.style.backgroundImage = `url(${userData.photo})`;
-  } else {
-    // photo.src = userData.photo;
-    photoCard.style.backgroundImage = `url("../../assets/images/default.jpg")`;
+    emailInput.value = userData.email;
+    phoneInput.value = userData.phone;
+    linkedinInput.value = userData.linkedin;
+    githubInput.value = userData.github;
+    typograInputs.value = userData.typogra;
   }
-  emailInput.value = userData.email;
-  phoneInput.value = userData.phone;
-  linkedinInput.value = userData.linkedin;
-  githubInput.value = userData.github;
-  typograInputs.value = userData.typogra;
 };
 
 // const form = document.querySelector(".js-form");
