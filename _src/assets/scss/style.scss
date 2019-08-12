@@ -1,21 +1,19 @@
 // Core
 @import "core/reset";
-@import "core/functions";
 @import "core/mixins";
-@import "core/links";
 @import "core/variables";
 @import "core/typography";
 // Layout
-@import "layout/header";
-@import "layout/footer";
+@import "layout/cards";
+@import "layout/design";
 @import "layout/fillin";
+@import "layout/footer";
+@import "layout/header";
+@import "layout/share";
+
 // Components
 @import "components/buttons";
 @import "components/palettes";
 // Pages
 @import "pages/landing";
-@import "pages/media";
-@import "pages/cards";
 @import "pages/section-b";
-@import "pages/share";
-@import "pages/design";
