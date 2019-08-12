@@ -6,19 +6,19 @@ autoPreview(".js-input-name", ".preview__bio--name", "Nombre Apellido");
 autoPreview(".js-input-job", ".preview__bio--job", "Front-end developer");
 
 function autoPreview(variableinput, variableoutput, defaultValue) {
-    const outputText = document.querySelector(variableoutput);
-    const inputText = document.querySelector(variableinput);
+  const outputText = document.querySelector(variableoutput);
+  const inputText = document.querySelector(variableinput);
 
-    function changePara(event) {
-        const inputValue = event.currentTarget;
-        if (inputText.value) {
-            outputText.innerHTML = inputValue.value;
-        } else {
-            outputText.innerHTML = defaultValue;
-            //console.log(defaultValue);
-        }
+  function changePara(event) {
+    const inputValue = event.currentTarget;
+    if (inputText.value) {
+      outputText.innerHTML = inputValue.value;
+    } else {
+      outputText.innerHTML = defaultValue;
+      //console.log(defaultValue);
     }
-    inputText.addEventListener("keyup", changePara);
+  }
+  inputText.addEventListener("keyup", changePara);
 }
 
 // change palettes function
@@ -26,9 +26,9 @@ function autoPreview(variableinput, variableoutput, defaultValue) {
 const previewCard = document.querySelector(".js-palettecontainer");
 
 function createPaletteSelectorFunction(classPalette) {
-    return function() {
-        previewCard.className = `js-palettecontainer ${classPalette}`;
-    };
+  return function() {
+    previewCard.className = `js-card ${classPalette}`;
+  };
 }
 
 const selectPalette1 = createPaletteSelectorFunction("palette1");
@@ -44,9 +44,9 @@ const ratio3 = document.querySelector("#option3").addEventListener("change", sel
 const previewCardTypo = document.querySelector(".js-typocontainer");
 
 function createTypographySelectorFunction(classTypography) {
-    return function() {
-        previewCardTypo.className = `js-card ${classTypography}`;
-    };
+  return function() {
+    previewCardTypo.className = `js-card ${classTypography}`;
+  };
 }
 
 const selectTypography1 = createTypographySelectorFunction("typography1");
@@ -62,45 +62,45 @@ const ratioTypo3 = document.querySelector("#option3_typo").addEventListener("cha
 const collapsibleTriggers = document.querySelectorAll(".js-collapsible__trigger");
 
 function updateCollapsible(event) {
-    const currentCollapsible = event.currentTarget.parentElement;
+  const currentCollapsible = event.currentTarget.parentElement;
 
-    if (currentCollapsible.classList.contains("js-collapsible--open")) {
-        currentCollapsible.classList.remove("js-collapsible--open");
-    } else {
-        for (const item of collapsibleTriggers) {
-            item.parentElement.classList.remove("js-collapsible--open");
-        }
-        currentCollapsible.classList.add("js-collapsible--open");
+  if (currentCollapsible.classList.contains("js-collapsible--open")) {
+    currentCollapsible.classList.remove("js-collapsible--open");
+  } else {
+    for (const item of collapsibleTriggers) {
+      item.parentElement.classList.remove("js-collapsible--open");
     }
+    currentCollapsible.classList.add("js-collapsible--open");
+  }
 }
 
 for (const item of collapsibleTriggers) {
-    item.addEventListener("click", updateCollapsible);
+  item.addEventListener("click", updateCollapsible);
 }
 
 //botón reset
 const reset = document.querySelector(".js-sectiona__buton");
 
 function resetAutopreview() {
-    const previewName = document.querySelector(".js-box1_result");
-    const previewJob = document.querySelector(".js-preview__job");
-    const iconsUsed = document.querySelectorAll(".js-icon-preview");
+  const previewName = document.querySelector(".js-box1_result");
+  const previewJob = document.querySelector(".js-preview__job");
+  const iconsUsed = document.querySelectorAll(".js-icon-preview");
 
-    previewName.innerHTML = "Nombre Apellido";
-    previewJob.innerHTML = "Front-end developer";
+  previewName.innerHTML = "Nombre Apellido";
+  previewJob.innerHTML = "Front-end developer";
 
-    for (const iconUsed of iconsUsed) {
-        iconUsed.style.color = "lightgrey";
-    }
+  for (const iconUsed of iconsUsed) {
+    iconUsed.style.color = "lightgrey";
+  }
 }
 
 function deleteText() {
-    const image = document.querySelector(".js-card__image");
-    const formFields = document.querySelector(".js-form");
-    const preview = document.querySelector(".js-preview");
-    formFields.reset(); //Reseteamos el formulario
-    preview.src = " "; //Dejamos en blanco para que no meta imagen
-    image.style.backgroundImage = "url(../../assets/images/default.jpg)";
+  const image = document.querySelector(".js-card__image");
+  const formFields = document.querySelector(".js-form");
+  const preview = document.querySelector(".js-preview");
+  formFields.reset(); //Reseteamos el formulario
+  preview.src = " "; //Dejamos en blanco para que no meta imagen
+  image.style.backgroundImage = "url(../../assets/images/default.jpg)";
 }
 
 reset.addEventListener("click", deleteText);
@@ -109,26 +109,17 @@ reset.addEventListener("click", resetAutopreview);
 // imagen preview
 const browse = document.querySelector(".js-form__photo");
 const loadFile = function(event) {
-    let preview = document.querySelector(".preview");
-    let cardImage = document.querySelector(".js-card__image");
-    preview.src = URL.createObjectURL(event.target.files[0]);
-    cardImage.style.backgroundImage = `url(${URL.createObjectURL(event.target.files[0])})`;
+  fr.addEventListener("load", loadFileToImages);
+  fr.readAsDataURL(event.target.files[0]);
 };
-// const browse = document.querySelector(".js-form__photo");
-// const loadFile = function(event) {
-//     fr.addEventListener("load", loadFileToImages);
-//     fr.readAsDataURL(event.target.files[0]);
-// };
-
 browse.addEventListener("change", loadFile);
 
 const loadFileToImages = function() {
-    let preview = document.querySelector(".preview");
-    preview.src = fr.result;
-    let cardImage = document.querySelector(".js-card__image");
-    cardImage.style.backgroundImage = `url(${fr.result})`;
-    //ToDo: volver a guardar en local storage
-    //saveInfo();
+  let preview = document.querySelector(".preview");
+  preview.src = fr.result;
+  let cardImage = document.querySelector(".js-card__image");
+  cardImage.style.backgroundImage = `url(${fr.result})`;
+  saveInfo();
 };
 
 // CREAR ENLACE DE CARD
@@ -141,89 +132,94 @@ const urlCard = document.querySelector(".created_card_small");
 
 //Función que coge la foto y la transforma en formato correcto para el JSON
 function loadPhoto(ev) {
-    ev.preventDefault();
-    let myPhoto = document.querySelector(".js-form__photo").files[0];
-    fr.addEventListener("load", sendData);
-    fr.readAsDataURL(myPhoto);
+  ev.preventDefault();
+  let myPhoto = document.querySelector(".js-form__photo").files[0];
+  fr.addEventListener("load", sendData);
+  fr.readAsDataURL(myPhoto);
 }
 
-function loadPalette(ev) {
-    ev.preventDefault();
+// function loadPalette(ev) {
+//   ev.preventDefault();
 
-    fr.readAsDataURL(createPaletteSelectorFunction);
-}
+//   fr.readAsDataURL(createPaletteSelectorFunction);
+// }
+
+// function loadPalette(ev) {
+//   ev.preventDefault();
+
+//   fr.readAsDataURL(createPaletteSelectorFunction);
+// }
 
 button.addEventListener("click", loadPhoto);
 //Función que es llamada después del loadPhoto y envía los valores JSON a la función que llama a la API.
 function sendData() {
-    let inputs = Array.from(form.elements);
-    let json = getJSONFromInputs(inputs);
-    json.photo = fr.result;
-    sendRequest(json);
+  let inputs = Array.from(form.elements);
+  let json = getJSONFromInputs(inputs);
+  json.photo = fr.result;
+  sendRequest(json);
 }
 // Función que transforma los valores del formulario en JSON excepto los botones.
 function getJSONFromInputs(inputs) {
-    debugger;
-    return inputs.reduce(function(acc, input) {
-        if (input.getAttribute("type") === "radio") {
-            if (input.checked === true) {
-                acc[input.name] = input.value;
-            }
-        } else if (input.nodeName !== "BUTTON") {
-            acc[input.name] = input.value;
-        }
-        return acc;
-    }, {});
+  return inputs.reduce(function(acc, input) {
+    if (input.getAttribute("type") === "radio") {
+      if (input.checked === true) {
+        acc[input.name] = input.value;
+      }
+    } else if (input.nodeName !== "BUTTON") {
+      acc[input.name] = input.value;
+    }
+    return acc;
+  }, {});
 }
 
 function showURL(data) {
-    if (data.success) {
-        // Show URL card
-        urlCard.innerHTML = '<h3 class="created_card_h3">La tarjeta ha sido creada:</h3> <a class="created_card_small" href=' + data.cardURL + ">" + data.cardURL + "</a>";
+  if (data.success) {
+    // Show URL card
+    urlCard.innerHTML = '<h3 class="created_card_h3">La tarjeta ha sido creada:</h3> <a class="created_card_small" href=' + data.cardURL + ">" + data.cardURL + "</a>";
 
-        // Update twitter button URL
-        const twitterButton = document.querySelector(".js-button-twitter");
-        twitterButton.href = `https://twitter.com/intent/tweet?text=Mira mi tarjeta de visita ${data.cardURL}`;
-    } else {
-        urlCard.innerHTML = "ERROR:" + data.error;
-    }
+    // Update twitter button URL
+    const twitterButton = document.querySelector(".js-button-twitter");
+    twitterButton.href = `https://twitter.com/intent/tweet?text=Mira mi tarjeta de visita ${data.cardURL}`;
+  } else {
+    urlCard.innerHTML = "ERROR:" + data.error;
+  }
 }
 
 // Función que llama a la API y le pasa en el BODY el JSON previamente transformado con los valores del formulario.
 function sendRequest(json) {
-    fetch("https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/", {
-            method: "POST",
-            body: JSON.stringify(json),
-            headers: {
-                "content-type": "application/json"
-            }
-        })
-        .then(function(resp) {
-            return resp.json();
-        })
-        .then(function(result) {
-            showURL(result);
-        })
-        .catch(function(error) {
-            console.log(error);
-        });
+  fetch("https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/", {
+    method: "POST",
+    body: JSON.stringify(json),
+    headers: {
+      "content-type": "application/json"
+    }
+  })
+    .then(function(resp) {
+      return resp.json();
+    })
+    .then(function(result) {
+      showURL(result);
+    })
+    .catch(function(error) {
+      console.log(error);
+    });
 }
 
 //Modificaciones: el Div final comentado de "landing_main" se tiene que descomentar, en el fillin_form el name: comepleteName pasa a ser name: name.
 // icon changes with info
 
 function changeIconColor(variableinput, classInput, classIcon) {
-    const classIconUsed = document.querySelector(classIcon);
-    const inputText = document.querySelector(variableinput);
+  const classIconUsed = document.querySelector(classIcon);
+  const inputText = document.querySelector(variableinput);
 
-    const handle = function() {
-        if (inputText.value) {
-            classIconUsed.style.color = "#114e4e";
-        } else {
-            classIconUsed.style.color = "lightgrey";
-        }
-    };
-    document.querySelector(classInput).addEventListener("keyup", handle);
+  const handle = function() {
+    if (inputText.value) {
+      classIconUsed.style.color = "#114e4e";
+    } else {
+      classIconUsed.style.color = "lightgrey";
+    }
+  };
+  document.querySelector(classInput).addEventListener("keyup", handle);
 }
 
 changeIconColor(".js-input-phone", "#phone", ".js-icon-phone");
@@ -231,41 +227,25 @@ changeIconColor(".js-input-email", "#email", ".js-icon-email");
 changeIconColor(".js-input-github", "#github", ".js-icon-github");
 changeIconColor(".js-input-linkedin", "#linkedin", ".js-icon-linkedin");
 
-// icon clickables when you write github & linkedin
+// icon clickables when you write email,github & linkedin
 
 function changeLinkIcon(variableinput, classIcon) {
-    const classIconUsed = document.querySelector(classIcon);
-    const inputText = document.querySelector(variableinput);
+  const classIconUsed = document.querySelector(classIcon);
+  const inputText = document.querySelector(variableinput);
 
-    const handle = function() {
-        if (inputText.value.startsWith("http://") || inputText.value.startsWith("https://")) {
-            classIconUsed.href = inputText.value;
-        } else {
-            classIconUsed.href = `http://${inputText.value}`;
-        }
-    };
-    document.querySelector(variableinput).addEventListener("keyup", handle);
+  const handle = function() {
+    if (inputText.value.startsWith("http://") || inputText.value.startsWith("https://")) {
+      classIconUsed.href = inputText.value;
+    } else {
+      classIconUsed.href = `http://${inputText.value}`;
+    }
+  };
+  document.querySelector(variableinput).addEventListener("keyup", handle);
 }
 
+changeLinkIcon(".js-input-email", ".js-icon-link-email");
 changeLinkIcon(".js-input-github", ".js-icon-link-github");
 changeLinkIcon(".js-input-linkedin", ".js-icon-link-linkedin");
-
-// icon clickables when you write email
-function changeLinkIconMail(variableinput, classIcon) {
-    const classIconUsed = document.querySelector(classIcon);
-    const inputText = document.querySelector(variableinput);
-
-    const handle = function() {
-        if (inputText.value.startsWith("http://") || inputText.value.startsWith("https://")) {
-            classIconUsed.href = `mailto:${inputText.value}`;
-        } else {
-            classIconUsed.href = `http://mailto:${inputText.value}`;
-        }
-    };
-    document.querySelector(variableinput).addEventListener("keyup", handle);
-}
-
-changeLinkIconMail(".js-input-email", ".js-icon-link-email");
 
 // LocalStorage
 const nameInput = document.querySelector(".js-input-name");
@@ -281,19 +261,24 @@ const typograInputs = document.querySelectorAll(".js-typography");
 const photoCard = document.querySelector(".js-card__image");
 
 function readChoosenPalette() {
-    const inputChecked = document.querySelector(".js-palettes:checked");
-    return parseInt(inputChecked.value);
+  const inputChecked = document.querySelector(".js-palettes:checked");
+  return parseInt(inputChecked.value);
+  // for (let i = 0; i < paletteInput.length; i = i + 1) {
+  //   if (paletteInput[i].checked) {
+  //     return parseInt(paletteInput[i].value);
+  //   }
+  // }
 }
 
 function readChoosenTypogra() {
-    const inputChecked = document.querySelector(".js-typography:checked");
-    return parseInt(inputChecked.value);
+  const inputChecked = document.querySelector(".js-typography:checked");
+  return parseInt(inputChecked.value);
 }
 
 function previewLocalStorage() {
-    for (let i = 0; i < itemInputs.length; i = i + 1) {
-        itemInputs[i].dispatchEvent(new Event("keyup"));
-    }
+  for (let i = 0; i < itemInputs.length; i = i + 1) {
+    itemInputs[i].dispatchEvent(new Event("keyup"));
+  }
 }
 
 //document.querySelector('.js-input-github').dispatchEvent(new Event('keyup'));
@@ -301,53 +286,62 @@ function previewLocalStorage() {
 const formInfo = {};
 
 const saveInfo = () => {
-    formInfo.palette = readChoosenPalette();
-    formInfo.name = nameInput.value;
-    formInfo.job = jobInput.value;
-    formInfo.photo = photo.src;
-    formInfo.email = emailInput.value;
-    formInfo.phone = phoneInput.value;
-    formInfo.linkedin = linkedinInput.value;
-    formInfo.github = githubInput.value;
-    formInfo.typogra = readChoosenTypogra();
+  formInfo.palette = readChoosenPalette();
+  formInfo.name = nameInput.value;
+  formInfo.job = jobInput.value;
+  formInfo.photo = photo.src;
+  formInfo.email = emailInput.value;
+  formInfo.phone = phoneInput.value;
+  formInfo.linkedin = linkedinInput.value;
+  formInfo.github = githubInput.value;
+  formInfo.typogra = readChoosenTypogra();
 
-    // Pasar objeto a cadena
-    localStorage.setItem("userData", JSON.stringify(formInfo));
+  // Pasar objeto a cadena
+  localStorage.setItem("userData", JSON.stringify(formInfo));
+  changeButtonColor();
 };
 
 const getFromLocalStorage = () => {
-    const userData = JSON.parse(localStorage.getItem("userData"));
+  const userData = JSON.parse(localStorage.getItem("userData"));
+  if (userData !== null) {
     paletteInput.value = userData.palette;
     nameInput.value = userData.name;
     jobInput.value = userData.job;
-    if (photo === true) {
-        photoCard.style.backgroundImage = `url(${userData.photo})`;
-    } else {
-        photo.src = userData.photo;
-        photoCard.style.backgroundImage = `url("../../assets/images/default.jpg")`;
-    }
+    photo.src = userData.photo;
+    photoCard.style.backgroundImage = `url(${userData.photo})`;
     emailInput.value = userData.email;
     phoneInput.value = userData.phone;
     linkedinInput.value = userData.linkedin;
     githubInput.value = userData.github;
     typograInputs.value = userData.typogra;
+  }
 };
 
 // const form = document.querySelector(".js-form");
 form.addEventListener("keyup", saveInfo);
 form.addEventListener("click", saveInfo);
 
-getFromLocalStorage();
-previewLocalStorage();
 //// changing color of button-share when form is completed
 
 const buttonShare = document.querySelector(".share__btn");
 
 function changeButtonColor() {
-    if (nameInput.value && jobInput.value && emailInput.value && linkedinInput.value && githubInput.value) {
-        buttonShare.style.background = "#e17334";
-    } else {
-        buttonShare.style.background = "lightgrey";
-    }
+  if (nameInput.value && jobInput.value && emailInput.value && linkedinInput.value && githubInput.value && photo.src) {
+    //if (nameInput.value && jobInput.value && emailInput.value && linkedinInput.value && githubInput.value && browse.value) {
+    buttonShare.style.background = "#e17334";
+  } else {
+    buttonShare.style.background = "lightgrey";
+  }
 }
-form.addEventListener("change", changeButtonColor);
+
+form.addEventListener("keyup", changeButtonColor);
+
+const startApp = () => {
+  if (!!formInfo === true) {
+    getFromLocalStorage();
+    previewLocalStorage();
+    changeButtonColor();
+  }
+};
+
+startApp();
