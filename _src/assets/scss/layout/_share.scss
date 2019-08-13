@@ -7,6 +7,9 @@
     display: flex;
     justify-content: center;
   }
+  &__btn {
+    cursor: pointer;
+  }
 }
 
 .created_card {
@@ -39,4 +42,8 @@
     text-decoration: none;
     border-radius: 3px;
   }
+}
+
+.created_card_button {
+  cursor: pointer;
 }
